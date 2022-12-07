@@ -1,0 +1,49 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.comment_-_container{
+  margin-top: 5px;
+  width: 100%;
+
+  .comment_div_with_pic{
+    display: flex;
+    gap: 8px;
+
+    .img_comment_container{
+      object-fit: fill;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .comment_-_container_-_description{
+      display: flex;
+      flex-direction: column;
+
+      .comment_profile_data{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+
+        .comment_profile_data_name{
+          font-size: 0.9em;
+          text-align: center;
+        }
+
+        .comment_profile_data_upload_time{
+          font-size: 0.8em;
+          color: #b9b9b9;
+          text-align: center;
+        }
+
+        .comment_description{
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+}
