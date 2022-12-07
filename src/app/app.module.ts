@@ -9,6 +9,7 @@ import { CommentComponent } from './component/comment/comment.component';
 import { NavComponent } from './component/nav/nav.component';
 import { MiniVideoComponent } from './component/mini-video/mini-video.component';
 import {FormsModule} from "@angular/forms";
+import { PlaylistComponent } from './pages/playlist/playlist.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {FormsModule} from "@angular/forms";
     CommentsComponent,
     CommentComponent,
     NavComponent,
-    MiniVideoComponent
+    MiniVideoComponent,
+    PlaylistComponent
   ],
     imports: [
         BrowserModule,
