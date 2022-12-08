@@ -1,7 +1,15 @@
+:root {
+  --bg_main: black;
+  --text_color: #ffffff;
+  --wrapper_width: 900px;
+  --bg_color_2: #1C1C24;
+  --nav_height: 80px;
+}
+
 *{
   box-sizing: border-box;
-  background-color: black;
-  color: #F5F5F5FF;
+  background-color: var(--bg_main);
+  color:var(--text_color);
   margin: 0;
   font-family: 'Poppins', sans-serif;
 }

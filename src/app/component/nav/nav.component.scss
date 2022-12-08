@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.nav_-_component{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  padding: 20px 50px;
+  background: #000000;
+  box-shadow: inset 0px -1px 0px #292932;
+  margin-bottom: calc(var(--nav_height) + 5px);
+  .img_-_logo_-_nav{
+    height: 41px;
+    width: 151px;
+    object-fit: cover;
+  }
+}

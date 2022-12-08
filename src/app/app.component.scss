@@ -1,3 +1,14 @@
-body{
-    font-family: 'Poppins', sans-serif;
+*{
+  box-sizing: border-box;
+  background-color: var(--bg_main);
+  color: var(--text_color);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app_-_wrap{
+  width: var(--wrapper_width);
+  display: block;
+  margin: auto;
+  position: relative;
 }

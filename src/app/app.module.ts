@@ -10,6 +10,7 @@ import { NavComponent } from './component/nav/nav.component';
 import { MiniVideoComponent } from './component/mini-video/mini-video.component';
 import {FormsModule} from "@angular/forms";
 import { PlaylistComponent } from './pages/playlist/playlist.component';
+import { MenuComponent } from './component/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PlaylistComponent } from './pages/playlist/playlist.component';
     CommentComponent,
     NavComponent,
     MiniVideoComponent,
-    PlaylistComponent
+    PlaylistComponent,
+    MenuComponent
   ],
     imports: [
         BrowserModule,
