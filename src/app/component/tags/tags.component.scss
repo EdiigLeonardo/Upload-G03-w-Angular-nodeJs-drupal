@@ -1,0 +1,38 @@
+*{
+  background-color: transparent;
+}
+
+.tags_layout{
+  display: grid;
+  grid-template-columns: repeat(3, 66px);
+  height: 12px;
+  gap: 2px 15px;
+  object-fit: cover;
+  background-color: transparent;
+
+  .tag_tags_layout{
+    font-size: 0.7em;
+    border: 1px solid #292932;
+    width: 76px;
+    height: 27px;
+    padding: 5px 5px;
+    margin: 5px 5px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+  .tag_tags_layout:hover{
+    background-color: var(--bg_color_menu_hover);
+    transform: translateY(-3px);
+    box-shadow: 2px 5px 2px #cecece;
+  }
+}
+
+.tags_header__{
+  color: var(--menu_header_color);
+  font-size: 0.9em;
+  margin: 10px 5px;
+  width: 100%;
+  background-color: transparent;
+}

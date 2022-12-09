@@ -4,6 +4,9 @@
   --wrapper_width: 900px;
   --bg_color_2: #1C1C24;
   --nav_height: 80px;
+  --bg_color_menu: #000000;
+  --bg_color_menu_hover: #111131;
+  --menu_header_color: #92929D;
 }
 
 *{
@@ -12,4 +15,15 @@
   color:var(--text_color);
   margin: 0;
   font-family: 'Poppins', sans-serif;
+}
+
+.svg-inline--fa {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+img{
+  width: 100%;
+  height: 100%;
 }

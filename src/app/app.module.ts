@@ -11,6 +11,7 @@ import { MiniVideoComponent } from './component/mini-video/mini-video.component'
 import {FormsModule} from "@angular/forms";
 import { PlaylistComponent } from './pages/playlist/playlist.component';
 import { MenuComponent } from './component/menu/menu.component';
+import { TagsComponent } from './component/tags/tags.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MenuComponent } from './component/menu/menu.component';
     NavComponent,
     MiniVideoComponent,
     PlaylistComponent,
-    MenuComponent
+    MenuComponent,
+    TagsComponent
   ],
     imports: [
         BrowserModule,

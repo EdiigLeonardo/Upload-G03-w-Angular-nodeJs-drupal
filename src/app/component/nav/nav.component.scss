@@ -1,3 +1,4 @@
+
 *{
   margin: 0;
   padding: 0;
@@ -9,13 +10,22 @@
   top: 0;
   left: 0;
   height: 80px;
-  padding: 20px 50px;
+  padding: 10px 20px;
   background: #000000;
   box-shadow: inset 0px -1px 0px #292932;
-  margin-bottom: calc(var(--nav_height) + 5px);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  .icon_nav{
+    width: 25px;
+  }
+
   .img_-_logo_-_nav{
-    height: 41px;
-    width: 151px;
+    width: 130px;
     object-fit: cover;
   }
+
+
 }
+

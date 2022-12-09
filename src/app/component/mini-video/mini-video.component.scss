@@ -1,0 +1,51 @@
+.mini_video_layout{
+  width: 443px;
+  background: #1C1C24;
+  border-radius: 20px;
+
+
+  .mini_video_header>img{
+    object-fit: cover;
+  }
+  .mini_video_header{
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+
+  .mini_video_img__{
+    width: 443px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .mini_video_profile_img{
+    position: absolute;
+    width: 69.72px;
+    height: 69.65px;
+    left: 344.23px;
+    top: 176px;
+    border-radius: 50%;
+  }
+
+  .mini_video_duration{
+    position: absolute;
+    width: 55px;
+    height: 18px;
+    left: 25px;
+    top: 175px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 5px;
+  }
+
+}
+
+
+
+
