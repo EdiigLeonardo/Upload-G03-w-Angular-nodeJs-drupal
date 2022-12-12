@@ -12,6 +12,7 @@ import {FormsModule} from "@angular/forms";
 import { PlaylistComponent } from './pages/playlist/playlist.component';
 import { MenuComponent } from './component/menu/menu.component';
 import { TagsComponent } from './component/tags/tags.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TagsComponent } from './component/tags/tags.component';
         BrowserModule,
         AppRoutingModule,
         FontAwesomeModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

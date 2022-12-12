@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ServiceService} from "../../service/service.service";
 
 @Component({
   selector: 'app-tags',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TagsComponent implements OnInit {
 
-  constructor() { }
+  tags: any;
+  constructor(private service: ServiceService) { }
 
   ngOnInit(): void {
-  }
-
+    this.service.getTags().subscribe((tags)=>{
+      this.tags = <any> tags;
+      console.log(this.tags)
+    })
+}
 }
