@@ -15,4 +15,8 @@ export class ServiceService {
   getTags() {
     return this.http.get(BASE_URL + "/" + "tags");
   }
+
+  getVideos(){
+    return this.http.get(BASE_URL + "/" + "videos");
+  }
 }
