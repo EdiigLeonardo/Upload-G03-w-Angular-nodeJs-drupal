@@ -3,6 +3,7 @@ import {faBarsStaggered} from "@fortawesome/free-solid-svg-icons"
 import {faHouse} from "@fortawesome/free-solid-svg-icons"
 import {faPlay} from "@fortawesome/free-solid-svg-icons"
 import {faClapperboard} from "@fortawesome/free-solid-svg-icons"
+import {faBars} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-menu',
@@ -14,6 +15,8 @@ export class MenuComponent implements OnInit {
   faHouse = faHouse;
   faPlay = faPlay;
   faClapperboard = faClapperboard;
+  faBars = faBars;
+  mobileView = true;
 
   constructor() { }
 
