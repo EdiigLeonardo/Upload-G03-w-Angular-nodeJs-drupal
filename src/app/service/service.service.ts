@@ -13,7 +13,11 @@ export class ServiceService {
   constructor(private http: HttpClient) {}
 
   getTags() {
-    return this.http.get(BASE_URL + "/" + "tags");
+    return this.http.get(BASE_URL + "/tags");
+  }
+
+  getVideo(id_video:number){
+    return this.http.get(BASE_URL + "/video/" + id_video);
   }
 
   getVideos(){

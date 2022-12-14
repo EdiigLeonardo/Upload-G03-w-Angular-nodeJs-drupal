@@ -13,6 +13,8 @@ import { PlaylistComponent } from './pages/playlist/playlist.component';
 import { MenuComponent } from './component/menu/menu.component';
 import { TagsComponent } from './component/tags/tags.component';
 import {HttpClientModule} from "@angular/common/http";
+import { VideoComponent } from './pages/video/video.component';
+import { VideoDetailsComponent } from './component/video-details/video-details.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import {HttpClientModule} from "@angular/common/http";
     MiniVideoComponent,
     PlaylistComponent,
     MenuComponent,
-    TagsComponent
+    TagsComponent,
+    VideoComponent,
+    VideoDetailsComponent
   ],
     imports: [
         BrowserModule,
