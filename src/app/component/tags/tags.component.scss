@@ -10,7 +10,7 @@
   object-fit: cover;
   background-color: transparent;
 
-  .tag_tags_layout{
+  .tag_items_layout{
     display: flex;
     font-size: 0.7em;
     border: 1px solid #292932;
@@ -27,7 +27,7 @@
     padding: 6px 10px;
   }
 
-  .tag_tags_layout:hover{
+  .tag_items_layout:hover{
     background-color: var(--bg_color_menu_hover);
     transform: translateY(-3px);
     box-shadow: 1px 1px 1px #cecece;
