@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CanaisComponent } from './canais.component';
+import { CanaisSugeridosComponent } from './canais-sugeridos.component';
 
 describe('CanaisComponent', () => {
-  let component: CanaisComponent;
-  let fixture: ComponentFixture<CanaisComponent>;
+  let component: CanaisSugeridosComponent;
+  let fixture: ComponentFixture<CanaisSugeridosComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CanaisComponent ]
+      declarations: [ CanaisSugeridosComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CanaisComponent);
+    fixture = TestBed.createComponent(CanaisSugeridosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
