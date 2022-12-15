@@ -7,8 +7,8 @@ import {PlaylistsComponent} from "./pages/playlists/playlists.component";
 import {CanaisSugeridosComponent} from "./pages/canais_sugeridos/canais-sugeridos.component";
 
 const routes: Routes = [
-  {path: 'video/:id', component: VideoComponent},
-  // {path: '', redirectTo: '/home' , pathMatch: 'full'},
+  {path: 'video', component: VideoComponent},
+  {path: '', redirectTo: '/home' , pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'canais', component: CanaisSugeridosComponent},
   {path: 'tematicas', component: TematicasComponent},

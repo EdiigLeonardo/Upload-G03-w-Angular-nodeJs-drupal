@@ -11,11 +11,11 @@ import {UploadService} from "../../service/upload.service";
 export class VideoDetailsComponent implements OnInit {
   video: any = [];
 
-  constructor(private route: ActivatedRoute, private service: UploadService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    let id_video = this.route.snapshot.params['id'];
-    this.service.getVideo(id_video).subscribe((video) =>
-    this.video = <any[]>video)
+    // let id_video = this.route.snapshot.params['id'];
+    // this.service.getVideo(id_video).subscribe((video) =>
+    // this.video = <any[]>video)
   }
 }
