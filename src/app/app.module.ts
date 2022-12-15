@@ -19,7 +19,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { CanaisSugeridosComponent } from './pages/canais_sugeridos/canais-sugeridos.component';
 import { PlaylistsComponent } from './pages/playlists/playlists.component';
 import { TematicasComponent } from './pages/tematicas/tematicas.component';
-import { CanalComponent } from './component/canal/canal.component';
+import { CanalComponent } from './pages/canal/canal.component';
 
 @NgModule({
   declarations: [
