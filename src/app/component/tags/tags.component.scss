@@ -11,21 +11,26 @@
   background-color: transparent;
 
   .tag_tags_layout{
+    display: flex;
     font-size: 0.7em;
     border: 1px solid #292932;
-    width: 76px;
-    height: 27px;
-    padding: 5px 5px;
+    min-width: 76px;
+    width: 100%;
+    min-height: 27px;
     margin: 5px 5px;
+    align-items: center;
     cursor: pointer;
     text-align: center;
+    justify-content: center;
     border-radius: 5px;
     background-color: transparent;
+    padding: 6px 10px;
   }
+
   .tag_tags_layout:hover{
     background-color: var(--bg_color_menu_hover);
     transform: translateY(-3px);
-    box-shadow: 2px 5px 2px #cecece;
+    box-shadow: 1px 1px 1px #cecece;
   }
 }
 

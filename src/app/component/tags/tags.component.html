@@ -1,14 +1,4 @@
 <h2 class="tags_header__">Tags</h2>
 <div class="tags_layout">
-  <span class="tag_tags_layout">Free Fire</span>
-  <span class="tag_tags_layout">Five</span>
-  <span class="tag_tags_layout">Games</span>
-  <span class="tag_tags_layout">Playstation</span>
-  <span class="tag_tags_layout">Delicious</span>
-  <span class="tag_tags_layout">Gamers</span>
-  <span class="tag_tags_layout">Free Fire</span>
-  <span class="tag_tags_layout">Five</span>
-  <span class="tag_tags_layout">Games</span>
-  <span class="tag_tags_layout">Playstation</span>
-  <span class="tag_tags_layout">Delicious</span>
+  <span class="tag_tags_layout" *ngFor="let item of tags">{{item.name}}</span>
 </div>
