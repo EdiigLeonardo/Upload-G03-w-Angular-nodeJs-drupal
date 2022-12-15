@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {ServiceService} from "../../service/service.service";
+import {UploadService} from "../../service/upload.service";
 
 
 @Component({
@@ -11,7 +11,7 @@ import {ServiceService} from "../../service/service.service";
 export class VideoDetailsComponent implements OnInit {
   video: any = [];
 
-  constructor(private route: ActivatedRoute, private service: ServiceService) { }
+  constructor(private route: ActivatedRoute, private service: UploadService) { }
 
   ngOnInit(): void {
     let id_video = this.route.snapshot.params['id'];

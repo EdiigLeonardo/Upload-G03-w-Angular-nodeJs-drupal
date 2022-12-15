@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import {ServiceService} from "../../service/service.service";
+import {UploadService} from "../../service/upload.service";
 
 @Component({
   selector: 'app-tags',
   templateUrl: './tags.component.html',
   styleUrls: ['./tags.component.scss']
 })
+
 export class TagsComponent implements OnInit {
 
   tags: any;
-  constructor(private service: ServiceService) { }
+  constructor(private service: UploadService) { }
 
   ngOnInit(): void {
     this.service.getTags().subscribe((tags)=>{
