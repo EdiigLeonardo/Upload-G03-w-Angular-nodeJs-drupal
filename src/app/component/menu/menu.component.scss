@@ -15,14 +15,11 @@ a{
   max-width: var(--wrapper_width);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
 
   .menu_header{
     width: 100%;
     max-width: var(--wrapper_width);
-    position: fixed;
-    top: 0;
-    left: 0;
     height: 80px;
     padding: 10px 20px;
     background: #000000;
@@ -32,12 +29,15 @@ a{
     align-items: center;
 
     .icon_nav{
-      width: 25px;
+      width: 46px;
+      height: 34px;
+      object-fit: cover;
     }
 
     .img_-_logo_-_nav{
-      width: 300px;
-      object-fit: fill;
+      width: 128px;
+      height: 39px;
+      object-fit: contain;
     }
 
 
@@ -51,15 +51,16 @@ a{
     max-width: var(--wrapper_width);
     padding: 5px;
     font-size: 1.1em;
-    margin-top: 90px;
 
     .menu_icon_{
       display: flex;
       flex: 1;
-      width: 148px;
+      max-width: 148px;
+      width: 100%;
       gap: 10px;
       cursor: pointer;
       color: white;
+      padding: 5px 15px;
 
       .fa_icon_menu_{
         width: 12px;
