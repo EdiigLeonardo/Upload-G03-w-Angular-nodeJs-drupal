@@ -15,6 +15,10 @@ import { TagsComponent } from './component/tags/tags.component';
 import {HttpClientModule} from "@angular/common/http";
 import { VideoComponent } from './pages/video/video.component';
 import { VideoDetailsComponent } from './component/video-details/video-details.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CanaisComponent } from './pages/canais/canais.component';
+import { PlaylistsComponent } from './pages/playlists/playlists.component';
+import { TematicasComponent } from './pages/tematicas/tematicas.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { VideoDetailsComponent } from './component/video-details/video-details.c
     MenuComponent,
     TagsComponent,
     VideoComponent,
-    VideoDetailsComponent
+    VideoDetailsComponent,
+    HomeComponent,
+    CanaisComponent,
+    PlaylistsComponent,
+    TematicasComponent
   ],
     imports: [
         BrowserModule,

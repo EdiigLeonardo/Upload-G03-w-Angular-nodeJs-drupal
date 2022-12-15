@@ -1,29 +1,40 @@
 <div class="menu_layout">
   <div class="menu_header">
     <fa-icon [icon]="faBars" class="icon_nav" *ngIf="mobileView"></fa-icon>
-    <img class="img_-_logo_-_nav" src="assets/upload.svg">
+    <img class="img_-_logo_-_nav" alt="logotipo" src="assets/upload.svg">
   </div>
+
   <div class="menu_icons__">
-    <span class="menu_icon_">
-      <fa-icon [icon]="faHouse" class="fa_icon_menu_"></fa-icon>
-      <span>Home</span>
-  </span>
-    <span class="menu_icon_">
-      <fa-icon [icon]="faBarsStaggered" class="fa_icon_menu_"></fa-icon>
-      <span>Canais</span>
-    </span>
-    <span class="menu_icon_">
-      <fa-icon [icon]="faClapperboard" class="fa_icon_menu_"></fa-icon>
-      <span>tematica</span>
-   </span>
-    <span class="menu_icon_">
-      <fa-icon [icon]="faPlay" class="fa_icon_menu_"></fa-icon>
-      <span>Playlists</span>
-  </span>
+    <a routerLink="/home" routerLinkActive="active">
+      <span class="menu_icon_">
+        <fa-icon [icon]="faHouse" class="fa_icon_menu_"></fa-icon>
+        <span>Home</span>
+      </span>
+    </a>
+    <a routerLink="/canais" routerLinkActive="active">
+       <span class="menu_icon_">
+        <fa-icon [icon]="faBarsStaggered" class="fa_icon_menu_"></fa-icon>
+        <span>Canais</span>
+      </span>
+    </a>
+    <a routerLink="/tematicas" routerLinkActive="active">
+      <span class="menu_icon_">
+        <fa-icon [icon]="faClapperboard" class="fa_icon_menu_"></fa-icon>
+        <span>Temáticas</span>
+      </span>
+    </a>
+    <a routerLink="/playlists" routerLinkActive="active">
+      <span class="menu_icon_">
+        <fa-icon [icon]="faPlay" class="fa_icon_menu_"></fa-icon>
+        <span>Playlists</span>
+      </span>
+    </a>
   </div>
+
   <div class="menu_tags__">
     <app-tags></app-tags>
   </div>
 
 </div>
+
 
