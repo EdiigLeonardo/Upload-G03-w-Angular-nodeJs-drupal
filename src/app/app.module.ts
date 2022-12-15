@@ -20,6 +20,7 @@ import { CanaisSugeridosComponent } from './component/canais_sugeridos/canais-su
 import { PlaylistsComponent } from './pages/playlists/playlists.component';
 import { TematicasComponent } from './pages/tematicas/tematicas.component';
 import { CanalComponent } from './pages/canal/canal.component';
+import { CanaisComponent } from './pages/canais/canais.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CanalComponent } from './pages/canal/canal.component';
     CanaisSugeridosComponent,
     PlaylistsComponent,
     TematicasComponent,
-    CanalComponent
+    CanalComponent,
+    CanaisComponent
   ],
     imports: [
         BrowserModule,
