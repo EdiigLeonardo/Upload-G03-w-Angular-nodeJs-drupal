@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {VideoComponent} from "./pages/video/video.component";
 import {HomeComponent} from "./pages/home/home.component";
-import {CanaisSugeridosComponent} from "./component/canais_sugeridos/canais-sugeridos.component";
+import {CanaisSugeridosComponent} from "./pages/canais_sugeridos/canais-sugeridos.component";
 import {TematicasComponent} from "./pages/tematicas/tematicas.component";
 import {PlaylistsComponent} from "./pages/playlists/playlists.component";
 
