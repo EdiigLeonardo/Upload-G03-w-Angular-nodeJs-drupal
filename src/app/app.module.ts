@@ -15,10 +15,14 @@ import { TagsComponent } from './component/tags/tags.component';
 import {HttpClientModule} from "@angular/common/http";
 import { VideoComponent } from './pages/video/video.component';
 import { VideoDetailsComponent } from './component/video-details/video-details.component';
+<<<<<<< Updated upstream
 import { HomeComponent } from './pages/home/home.component';
 import { CanaisComponent } from './pages/canais/canais.component';
 import { PlaylistsComponent } from './pages/playlists/playlists.component';
 import { TematicasComponent } from './pages/tematicas/tematicas.component';
+=======
+import { CanalComponent } from './pages/canal/canal.component';
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -32,10 +36,14 @@ import { TematicasComponent } from './pages/tematicas/tematicas.component';
     TagsComponent,
     VideoComponent,
     VideoDetailsComponent,
+<<<<<<< Updated upstream
     HomeComponent,
     CanaisComponent,
     PlaylistsComponent,
     TematicasComponent
+=======
+    CanalComponent
+>>>>>>> Stashed changes
   ],
     imports: [
         BrowserModule,
