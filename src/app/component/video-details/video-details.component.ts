@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
-import {UploadService} from "../../service/upload.service";
-
+import {faThumbsUp} from "@fortawesome/free-solid-svg-icons";
+import {faThumbsDown} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-video-details',
@@ -9,13 +8,11 @@ import {UploadService} from "../../service/upload.service";
   styleUrls: ['./video-details.component.scss']
 })
 export class VideoDetailsComponent implements OnInit {
-  video: any = [];
+  faThumbsUp = faThumbsUp;
+  faThumbsDown = faThumbsDown;
 
   constructor() { }
 
   ngOnInit(): void {
-    // let id_video = this.route.snapshot.params['id'];
-    // this.service.getVideo(id_video).subscribe((video) =>
-    // this.video = <any[]>video)
   }
 }
