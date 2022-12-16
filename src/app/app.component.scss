@@ -20,14 +20,14 @@
 
     .app_menu{
       flex: 0.25;
-      padding: 5px;
       border-right: 1px solid #292932;
       min-height: 705px;
     }
 
     .app_pages_container{
       flex: 0.75;
-      margin: 0 5px;
+      margin: 10px 5px;
+      padding: 10px 5px;
     }
 
   }

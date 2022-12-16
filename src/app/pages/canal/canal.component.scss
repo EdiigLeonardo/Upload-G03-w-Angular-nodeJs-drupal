@@ -1,1 +1,32 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.channel_layout_{
+
+  .profile_info_img__{
+    position: relative;
+    flex: 1;
+    height: 292.13px;
+    object-fit: cover;
+    border-radius: 15px;
+    /* inset | offset-x | offset-y | color */
+    box-shadow: inset 0 7em #292932;
+    object-position: 80% 25%;
+  }
+
+  .user_info_img__{
+    position: absolute;
+    object-fit: cover;
+    width: 220px;
+    height: 220px;
+    left: 1095px;
+    right: 500px;
+    top: 192px;
+    border: 6px solid #FFFFFF;
+    border-radius: 50%;
+  }
+
+}
 
