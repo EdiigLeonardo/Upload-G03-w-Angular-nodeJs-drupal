@@ -20,7 +20,6 @@ import { CanaisSugeridosComponent } from './pages/canais_sugeridos/canais-sugeri
 import { PlaylistsComponent } from './pages/playlists/playlists.component';
 import { TematicasComponent } from './pages/tematicas/tematicas.component';
 import { CanalComponent } from './pages/canal/canal.component';
-import { CanaisComponent } from './pages/canais/canais.component'
 
 
 
@@ -40,12 +39,7 @@ import { CanaisComponent } from './pages/canais/canais.component'
     CanaisSugeridosComponent,
     PlaylistsComponent,
     TematicasComponent,
-    CanalComponent,
-    CanaisComponent
-
-
-
-
+    CanalComponent
   ],
     imports: [
         BrowserModule,
