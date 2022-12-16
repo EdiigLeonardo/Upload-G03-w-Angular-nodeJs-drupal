@@ -5,14 +5,14 @@ import {HomeComponent} from "./pages/home/home.component";
 import {TematicasComponent} from "./pages/tematicas/tematicas.component";
 import {PlaylistsComponent} from "./pages/playlists/playlists.component";
 import {CanalComponent} from "./pages/canal/canal.component";
-import {CanaisSugeridosComponent} from "./pages/canais_sugeridos/canais-sugeridos.component";
+import {CanaisComponent} from "./pages/canais/canais.component";
 
 const routes: Routes = [
   {path: 'video', component: VideoComponent},
   {path: '', redirectTo: '/home' , pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'canal', component: CanalComponent},
-  {path: 'canais', component: CanaisSugeridosComponent},
+  {path: 'canais', component: CanaisComponent},
   {path: 'tematicas', component: TematicasComponent},
   {path: 'playlists', component: PlaylistsComponent}
 ];
