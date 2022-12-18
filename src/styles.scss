@@ -4,9 +4,11 @@
   --wrapper_width: 1400px;
   --bg_color_2: #1C1C24;
   --nav_height: 80px;
-  --bg_color_menu: #000000;
+  --bg_color_menu: #6b6969;
   --bg_color_menu_hover: #111131;
   --menu_font_color: #B5B5BE;
+  --text_span_color_: #FAFAFB;
+  --borders-colors: #292932;
 }
 
 *{
@@ -31,3 +33,9 @@ img{
 fa-icon{
   color: var(--menu_font_color);
 }
+
+body{
+  width: 100%;
+}
+
+

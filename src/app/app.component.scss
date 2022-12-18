@@ -10,24 +10,23 @@
   width: var(--wrapper_width);
   display: block;
   margin: auto;
-  min-height: 700px;
   position: relative;
+  padding: 10px 10px;
 
   .app_layout{
     display: flex;
-    flex: 1;
     padding-top: 5px;
+    max-width: var(--wrapper_width);
 
     .app_menu{
       flex: 0.25;
-      border-right: 1px solid #292932;
       height: fit-content;
     }
 
     .app_pages_container{
       flex: 0.75;
-      margin: 10px 5px;
-      padding: 10px 5px;
+      margin: 0 5px;
+      padding: 0 5px;
     }
 
   }

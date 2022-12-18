@@ -37,6 +37,8 @@ a{
       width: 46px;
       height: 34px;
       object-fit: cover;
+      color: var(--menu_font_color);
+      cursor: pointer;
     }
 
     .img_-_logo_-_nav{
@@ -88,9 +90,8 @@ a{
     }
 
     .menu_icon_:hover{
-      border-left: 1px solid white;
-      padding-left: 5px;
-      transform: translateY(-2px);
+      border-left: 1px solid var(--menu_font_color);
+      padding-left: 25px;
       font-size: 1.2em;
     }
 

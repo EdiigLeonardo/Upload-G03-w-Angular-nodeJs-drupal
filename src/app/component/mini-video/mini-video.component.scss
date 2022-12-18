@@ -1,5 +1,7 @@
 .mini_video_layout{
-  width: 443px;
+  width: 100%;
+  flex: 1;
+  min-width: 443px;
   background: #1C1C24;
   border-radius: 20px;
 
@@ -17,7 +19,7 @@
     width: 443px;
     height: 210px;
     object-fit: cover;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 0 0;
   }
 
   .mini_video_profile_img{
