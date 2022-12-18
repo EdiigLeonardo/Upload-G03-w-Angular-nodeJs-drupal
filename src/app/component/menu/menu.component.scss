@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  color: var(--menu_font_color);
 }
 
 a{
@@ -12,10 +13,13 @@ a{
   top: 0;
   left: 0;
   width: 100%;
+  height: 1076px;
   max-width: var(--wrapper_width);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  border: 1px solid #292932;
+  color: var(--menu_font_color);
 
   .menu_header{
     width: 100%;
@@ -57,16 +61,26 @@ a{
     .menu_icon_{
       display: flex;
       flex: 1;
-      max-width: 148px;
       width: 100%;
       gap: 10px;
       cursor: pointer;
       color: white;
       padding: 5px 15px;
+      align-items: center;
 
       .fa_icon_menu_{
-        width: 12px;
         text-align: center;
+        flex: 0.15;
+        color: var(--menu_font_color);
+      }
+      span{
+        width: 50%;
+        text-align: left;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        color: var(--menu_font_color);
       }
     }
     .menu_icon_{
@@ -93,5 +107,8 @@ a{
     max-width: var(--wrapper_width);
   }
 
+  fa-icon{
+    color: var(--menu_font_color);
+  }
 }
 

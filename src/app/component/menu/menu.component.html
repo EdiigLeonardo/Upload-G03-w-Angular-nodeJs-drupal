@@ -3,32 +3,23 @@
     <fa-icon [icon]="faBars" class="icon_nav" *ngIf="mobileView"></fa-icon>
     <img class="img_-_logo_-_nav" alt="logotipo" src="assets/upload.svg">
   </div>
-
   <div class="menu_icons__">
-    <a routerLink="/home" routerLinkActive="active">
-      <span class="menu_icon_">
-        <fa-icon [icon]="faHouse" class="fa_icon_menu_"></fa-icon>
-        <span>Home</span>
-      </span>
-    </a>
-    <a routerLink="/canais" routerLinkActive="active">
-       <span class="menu_icon_">
-        <fa-icon [icon]="faBarsStaggered" class="fa_icon_menu_"></fa-icon>
-        <span>Canais</span>
-      </span>
-    </a>
-    <a routerLink="/tematicas" routerLinkActive="active">
-      <span class="menu_icon_">
-        <fa-icon [icon]="faClapperboard" class="fa_icon_menu_"></fa-icon>
-        <span>Temáticas</span>
-      </span>
-    </a>
-    <a routerLink="/playlists" routerLinkActive="active">
-      <span class="menu_icon_">
-        <fa-icon [icon]="faPlay" class="fa_icon_menu_"></fa-icon>
-        <span>Playlists</span>
-      </span>
-    </a>
+    <span class="menu_icon_" routerLink="/home" routerLinkActive="active">
+      <fa-icon [icon]="faHouse" class="fa_icon_menu_"></fa-icon>
+      <span>Home</span>
+    </span>
+     <span class="menu_icon_" routerLink="/canais" routerLinkActive="active">
+      <fa-icon [icon]="faBarsStaggered" class="fa_icon_menu_"></fa-icon>
+      <span>Canais</span>
+    </span>
+    <span class="menu_icon_" routerLink="/tematicas" routerLinkActive="active">
+      <fa-icon [icon]="faClapperboard" class="fa_icon_menu_"></fa-icon>
+      <span>Temáticas</span>
+    </span>
+    <span class="menu_icon_" routerLink="/playlists" routerLinkActive="active">
+      <fa-icon [icon]="faPlay" class="fa_icon_menu_"></fa-icon>
+      <span>Playlists</span>
+    </span>
   </div>
 
   <div class="menu_tags__">

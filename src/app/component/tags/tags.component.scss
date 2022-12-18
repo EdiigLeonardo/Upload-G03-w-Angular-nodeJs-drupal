@@ -1,12 +1,14 @@
 *{
   background-color: transparent;
+  color: var(--menu_font_color);
 }
 
 .tags_layout{
   display: grid;
-  grid-template-columns: repeat(3, 66px);
+  grid-template-columns: repeat(3, 1fr);
   height: 12px;
   gap: 2px 15px;
+  padding: 0 20px;
   object-fit: cover;
   background-color: transparent;
 
@@ -35,7 +37,7 @@
 }
 
 .tags_header__{
-  color: var(--menu_header_color);
+  color: var(--menu_font_color);
   font-size: 0.9em;
   margin: 10px 5px;
   width: 100%;
