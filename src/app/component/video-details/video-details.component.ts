@@ -20,6 +20,8 @@ export class VideoDetailsComponent implements OnInit {
     let id_video = this.route.snapshot.params['id'];
     this.service.getVideo(id_video).subscribe(video => {
       this.video = <any[]>video;
+      this.video = this.video[0]
+        // console.log(this.video)
       })
   }
 }
