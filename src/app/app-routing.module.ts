@@ -8,7 +8,7 @@ import {CanalComponent} from "./pages/canal/canal.component";
 import {CanaisComponent} from "./pages/canais/canais.component";
 
 const routes: Routes = [
-  {path: 'video', component: VideoComponent},
+  {path: 'video/:id', component: VideoComponent},
   {path: '', redirectTo: '/home' , pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'canal', component: CanalComponent},

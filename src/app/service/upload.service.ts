@@ -19,8 +19,4 @@ export class UploadService {
   getVideo(id_video:number){
     return this.http.get(BASE_URL + "/video/" + id_video);
   }
-
-  getVideos(){
-    return this.http.get(BASE_URL + "/" + "videos");
-  }
 }
