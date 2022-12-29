@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {UploadService} from "../../service/upload.service";
 
 @Component({
   selector: 'app-canal',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./canal.component.scss']
 })
 export class CanalComponent implements OnInit {
+  channelVideos: any;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, public service: UploadService) { }
 
   ngOnInit(): void {
+    let id_canal = this.route.snapshot.params['id_canal'];
+    this.service.getChannelVideos(id_canal).subscribe((videos)=>{
+      this.channelVideos = videos;
+      console.log(this.channelVideos)
+    })
   }
 
 }

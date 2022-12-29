@@ -14,10 +14,12 @@
     </div>
   </div>
   <div class="channel_grid_videos__">
-    <app-mini-video_details></app-mini-video_details>
-    <app-mini-video_details></app-mini-video_details>
-    <app-mini-video_details></app-mini-video_details>
-    <app-mini-video_details></app-mini-video_details>
+    <app-mini-video_details *ngFor="let item of channelVideos"
+    [thumb]="this.service.addUrlOfSrc(item.thumbnail__target_id)"
+    [data_upload]="item.field_data_upload"
+    [video_title]="item.name"
+    [tags]="this.service.editTagsFromVideo(item.field_tags)">
+    </app-mini-video_details>
   </div>
   <div class="menu_comentarios">
     <app-comments></app-comments>
