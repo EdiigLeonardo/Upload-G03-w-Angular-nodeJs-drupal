@@ -39,4 +39,5 @@ export class UploadService {
   addUrlOfSrc(url: string){
     return PANTHEON_URL + url;
   }
+
 }
