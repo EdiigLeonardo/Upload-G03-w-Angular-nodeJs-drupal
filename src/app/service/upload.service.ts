@@ -18,6 +18,14 @@ export class UploadService {
     return this.http.get(BASE_URL + "/tags");
   }
 
+  // getUser(id_user:number){
+  //   return this.http.get(BASE_URL + "/user/" + id_user);
+  // }
+
+  getCanal(id_canal:number){
+    return this.http.get(BASE_URL + "/canal/" + id_canal);
+  }
+
   getVideo(id_video:number){
     return this.http.get(BASE_URL + "/video/" + id_video);
   }

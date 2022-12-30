@@ -13,6 +13,7 @@ export class VideoDetailsComponent implements OnInit {
   faThumbsUp = faThumbsUp;
   faThumbsDown = faThumbsDown;
   video: any = {};
+  canal: any = {};
 
   constructor(private route: ActivatedRoute, private service: UploadService) { }
 
@@ -21,7 +22,13 @@ export class VideoDetailsComponent implements OnInit {
     this.service.getVideo(id_video).subscribe(video => {
       this.video = <any[]>video;
       this.video = this.video[0]
-        // console.log(this.video)
-      })
+      });
+
+    let id_canal = this.route.snapshot.params['id'];
+    this.service.getCanal(id_canal).subscribe(canal => {
+      this.canal = <any[]>canal;
+      this.canal = this.canal[0];
+      console.log(this.canal)
+    })
   }
 }
