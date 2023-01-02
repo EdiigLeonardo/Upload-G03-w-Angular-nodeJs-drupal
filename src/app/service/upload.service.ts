@@ -5,13 +5,13 @@ import {ActivatedRoute} from "@angular/router";
 
 const BASE_URL = "https://dev-upload-project-03.pantheonsite.io/api"
 const PANTHEON_URL = "https://dev-upload-project-03.pantheonsite.io/"
+const MEDIA_LINK = "https://dev-upload-project-03.pantheonsite.io/media/";
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class UploadService {
-
   constructor(private http: HttpClient) {}
 
   getTags() {
@@ -40,7 +40,6 @@ export class UploadService {
     let result = list_of_values.map((value)=>{
       return "#" + value + " "
     })
-
     return result.join("")
   }
 
@@ -48,4 +47,7 @@ export class UploadService {
     return PANTHEON_URL + url;
   }
 
+  addLinkToNode(media:string){
+    return MEDIA_LINK + media;
+  }
 }
