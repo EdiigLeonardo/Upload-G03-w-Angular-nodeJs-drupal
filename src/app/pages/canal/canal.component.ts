@@ -9,14 +9,19 @@ import {UploadService} from "../../service/upload.service";
 })
 export class CanalComponent implements OnInit {
   channelVideos: any;
+  channel: any;
 
   constructor(private route: ActivatedRoute, public service: UploadService) { }
 
   ngOnInit(): void {
     let id_canal = this.route.snapshot.params['id_canal'];
+
     this.service.getChannelVideos(id_canal).subscribe((videos)=>{
       this.channelVideos = videos;
-      console.log(this.channelVideos)
+    })
+
+    this.service.getChannel(id_canal).subscribe((canal)=>{
+      this.channel = canal;
     })
   }
 

@@ -5,7 +5,7 @@ import {ActivatedRoute} from "@angular/router";
 
 const BASE_URL = "https://dev-upload-project-03.pantheonsite.io/api"
 const PANTHEON_URL = "https://dev-upload-project-03.pantheonsite.io/"
-const MEDIA_LINK = "https://dev-upload-project-03.pantheonsite.io/media/";
+const MEDIA_LINK = "https://dev-upload-project-03.pantheonsite.io/sites/default/files/2022-12/";
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +30,10 @@ export class UploadService {
     return this.http.get(BASE_URL + "/canal/videos/" + id_canal)
   }
 
+  getChannel(id_canal:number){
+    return this.http.get(BASE_URL + "/canal/" + id_canal)
+  }
+
   editTagsFromVideo(value: string){
     const list_of_values = value.split(",")
 
@@ -43,7 +47,7 @@ export class UploadService {
     return PANTHEON_URL + url;
   }
 
-  addLinkToNode(media:string){
+  addMedia(media:string){
     return MEDIA_LINK + media;
   }
 }
