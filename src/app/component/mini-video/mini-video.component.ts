@@ -14,9 +14,11 @@ export class MiniVideoComponent implements OnInit {
   @Input() data_upload = "";
   @Input() video_title = "";
   @Input() video_src = "";
+  @Input() canal = "";
 
 
-  constructor(private service: UploadService) { }
+  constructor(private service: UploadService) {
+  }
 
   ngOnInit(): void {
   }

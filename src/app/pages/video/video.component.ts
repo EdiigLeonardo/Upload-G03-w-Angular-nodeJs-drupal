@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UploadService} from "../../service/upload.service";
 
 @Component({
   selector: 'app-video',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: UploadService) {
+  }
 
   ngOnInit(): void {
   }
-
 }
+

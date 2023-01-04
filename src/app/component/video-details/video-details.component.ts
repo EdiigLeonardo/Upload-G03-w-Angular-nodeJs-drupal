@@ -3,7 +3,7 @@ import {faThumbsUp} from "@fortawesome/free-solid-svg-icons";
 import {faThumbsDown} from "@fortawesome/free-solid-svg-icons";
 import {UploadService} from "../../service/upload.service";
 import {ActivatedRoute} from "@angular/router";
-import {DomSanitizer} from "@angular/platform-browser";
+import {DomSanitizer, SafeUrl} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-video-details',
@@ -16,6 +16,10 @@ export class VideoDetailsComponent implements OnInit {
   video: any = {};
   canal: any = {};
 
+
+  videos: any = {};
+  pronto: boolean = false;
+
   constructor(private route: ActivatedRoute, private service: UploadService, private sanitizer: DomSanitizer) {
   }
 
@@ -25,12 +29,22 @@ export class VideoDetailsComponent implements OnInit {
       this.video = <any[]>video;
       this.video = this.video[0]
       this.video.field_media_oembed_video = this.video.field_media_oembed_video.replace('watch?v=', 'embed/')
-      this.video.field_media_oembed_video = this.sanitizer.bypassSecurityTrustUrl(this.video.field_media_oembed_video)
+      this.video.field_media_oembed_video = this.sanitizer.bypassSecurityTrustResourceUrl(this.video.field_media_oembed_video)
+
+      this.video.field_tags = this.video.field_tags.replaceAll(',', ' #')
 
       this.service.getCanal(this.video.field_canal).subscribe(canal => {
         this.canal = <any[]>canal;
         this.canal = this.canal[0]
+        console.log(this.canal)
+
+        this.service.getChannelVideos(this.video.field_canal).subscribe(videos => {
+          this.videos = <any[]>videos;
+          console.log(this.videos)
+        })
       })
     });
+    this.pronto = true;
   }
+
 }

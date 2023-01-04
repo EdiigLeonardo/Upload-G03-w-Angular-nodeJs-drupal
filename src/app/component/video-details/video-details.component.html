@@ -1,6 +1,6 @@
-<div class="video_container">
+<div class="video_container" *ngIf="pronto">
   <h2>{{video.name}}</h2>
-  <h5>{{'#' + video.field_tags}}</h5>
+  <h5>#{{video.field_tags}}</h5>
   <iframe
     [src]="video.field_media_oembed_video">
   </iframe>
@@ -17,4 +17,12 @@
       <div class="descricao">{{video.field_descricao}}</div>
     </div>
   </div>
+
+  <app-mini-video_details *ngFor="let v of videos"
+                          [video_title]="v.name"
+                          [canal]="v.field_canal"
+                          [data_upload]="v.field_data_upload"
+
+  >
+  </app-mini-video_details>
 </div>
