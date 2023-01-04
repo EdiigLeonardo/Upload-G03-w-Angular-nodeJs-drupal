@@ -1,7 +1,7 @@
 <div *ngFor="let canal of channel">
   <div class="channel_layout_">
     <div class="profile_infos_">
-      <img [src]="this.service.addMedia(canal.field_foto_de_capa)" class="profile_info_img__">
+      <img [src]="this.service.addUrlOfSrc(canal.field_media_image)" class="profile_info_img__">
       <img [src]="this.service.addUrlOfSrc(canal.user_picture)" class="user_info_img__">
     </div>
     <div class="channel_br_division_100">
@@ -17,7 +17,8 @@
                               [thumb]="this.service.addUrlOfSrc(item.thumbnail__target_id)"
                               [data_upload]="item.field_data_upload"
                               [video_title]="item.name"
-                              [tags]="this.service.editTagsFromVideo(item.field_tags)">
+                              [video_duration]="item.field_duracao"
+                              [tags]="this.service.editTagsFromVideo(item.field_tags)" class="channel_card_-_">
       </app-mini-video_details>
     </div>
     <div class="menu_comentarios">

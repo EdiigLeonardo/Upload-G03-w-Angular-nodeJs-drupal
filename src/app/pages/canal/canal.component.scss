@@ -4,7 +4,6 @@
 }
 
 .channel_layout_{
-
   .profile_info_img__{
     position: relative;
     flex: 1;
@@ -72,5 +71,12 @@
   .menu_comentarios{
     margin-top: 10px;
   }
+}
+
+.channel_card_-_:hover{
+  cursor: pointer;
+  color: #cecece;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(250, 250, 250, 0.35);
 }
 
