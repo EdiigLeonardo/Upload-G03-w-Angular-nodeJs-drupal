@@ -1,18 +1,20 @@
-<div class="video_container" *ngIf="video">
+<div class="video_container">
   <h2>{{video.name}}</h2>
-  <h5>{{video.field_tags}}</h5>
+  <h5>{{'#' + video.field_tags}}</h5>
   <iframe
-    [src]="video.thumbnail__target_id">
+    [src]="video.field_media_oembed_video">
   </iframe>
   <div class="video_details">
-    <img src="./assets/ANGLA-78.jpg" class="img_user">
-      <div class="video_descricao">
+    <img [src]="canal.user_picture" class="img_user">
+    <div class="video_descricao">
       <div class="details_user_time">
-        <div class="nome_user">Angla</div>
-        <div class="time">há 5 minutos</div>
+        <div class="nome_user">{{canal.title}}</div>
+        <div class="time">{{video.field_data_upload}}</div>
       </div>
-      <fa-icon [icon]="faThumbsUp" class="like"></fa-icon>|<fa-icon [icon]="faThumbsDown" class="deslike"></fa-icon>
+      <fa-icon [icon]="faThumbsUp" class="like"></fa-icon>
+      |
+      <fa-icon [icon]="faThumbsDown" class="deslike"></fa-icon>
       <div class="descricao">{{video.field_descricao}}</div>
-      </div>
+    </div>
   </div>
 </div>
