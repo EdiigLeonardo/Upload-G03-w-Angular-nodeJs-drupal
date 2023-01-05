@@ -21,6 +21,7 @@ import { PlaylistsComponent } from './pages/playlists/playlists.component';
 import { TematicasComponent } from './pages/tematicas/tematicas.component';
 import { CanalComponent } from './pages/canal/canal.component';
 import { CanaisComponent } from './pages/canais/canais.component';
+import { TematicasSugeridasComponent } from './component/tematicas-sugeridas/tematicas-sugeridas.component';
 
 
 
@@ -41,7 +42,8 @@ import { CanaisComponent } from './pages/canais/canais.component';
     PlaylistsComponent,
     TematicasComponent,
     CanalComponent,
-    CanaisComponent
+    CanaisComponent,
+    TematicasSugeridasComponent
   ],
     imports: [
         BrowserModule,

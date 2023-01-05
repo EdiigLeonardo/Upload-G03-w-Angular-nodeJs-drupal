@@ -1,0 +1,20 @@
+
+  .videos_page{
+    display: flex;
+    padding-top: 5px;
+    justify-content: space-between;
+
+    .all-videos-field{
+      margin: 0 5px;
+      padding: 0 0px;
+      flex: 0.75;
+    }
+
+    .right-bar{
+      flex: 0.25;
+      height: fit-content;
+      flex-direction: column;
+      margin: 0 10px;
+    }
+  }
+
