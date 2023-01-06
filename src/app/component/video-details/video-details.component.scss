@@ -9,6 +9,11 @@
   margin-top: 5px;
   width: 100%;
 
+  .video {
+
+    border-radius: 10px 10px;
+  }
+
   h5 {
     color: #4783ee;
   }
@@ -57,9 +62,9 @@
       }
     }
 
-    .outros {
-      flex: 1
-    }
-
   }
+}
+
+.outros {
+  flex: 1
 }

@@ -1,8 +1,8 @@
 <div class="video_container" *ngIf="pronto">
   <h2>{{video.name}}</h2>
   <h5>#{{video.field_tags}}</h5>
-  <iframe
-    [src]="video.field_media_oembed_video">
+  <iframe class="video"
+          [src]="video.field_media_oembed_video">
   </iframe>
   <div class="video_details">
     <img [src]="canal.user_picture" class="img_user">

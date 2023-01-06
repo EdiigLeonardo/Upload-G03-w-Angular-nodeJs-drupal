@@ -31,7 +31,7 @@ export class VideoDetailsComponent implements OnInit {
       this.video.field_media_oembed_video = this.video.field_media_oembed_video.replace('watch?v=', 'embed/')
       this.video.field_media_oembed_video = this.sanitizer.bypassSecurityTrustResourceUrl(this.video.field_media_oembed_video)
 
-      this.video.field_tags = this.video.field_tags.replaceAll(',', ' #')
+      this.video.field_tags = this.video.field_tags.replaceAll(', ', ' #')
 
       this.service.getCanal(this.video.field_canal).subscribe(canal => {
         this.canal = <any[]>canal;
