@@ -17,12 +17,12 @@
   .user_info_img__{
     position: absolute;
     object-fit: cover;
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     left: 1095px;
     right: 500px;
     top: 192px;
-    border: 6px solid #FFFFFF;
+    border: 6px solid #ececec;
     border-radius: 50%;
   }
   .channel_br_division_100{
@@ -77,6 +77,6 @@
   cursor: pointer;
   color: #cecece;
   transform: translateY(-3px);
-  box-shadow: 0 4px 17px rgba(250, 250, 250, 0.35);
+  //box-shadow: 0 4px 17px rgba(250, 250, 250, 0.35);
 }
 
