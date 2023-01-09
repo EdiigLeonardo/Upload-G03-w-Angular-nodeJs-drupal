@@ -15,7 +15,7 @@ export class UploadService {
   constructor(private http: HttpClient) {}
 
   getTags() {
-    return this.http.get(BASE_URL + "/tags");
+    return this.http.get(BASE_URL + "/tags?t=" + Date.now());
   }
 
   getCanal(id_canal:number){
