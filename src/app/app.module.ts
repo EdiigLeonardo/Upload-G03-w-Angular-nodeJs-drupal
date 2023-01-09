@@ -22,7 +22,7 @@ import { TematicasComponent } from './pages/tematicas/tematicas.component';
 import { CanalComponent } from './pages/canal/canal.component';
 import { CanaisComponent } from './pages/canais/canais.component';
 import { TematicasSugeridasComponent } from './component/tematicas-sugeridas/tematicas-sugeridas.component';
-import { VideosComponent } from './component/videos/videos.component';
+import { CanalBoxComponent } from './component/canal-box/canal-box.component';
 
 
 
@@ -45,7 +45,7 @@ import { VideosComponent } from './component/videos/videos.component';
     CanalComponent,
     CanaisComponent,
     TematicasSugeridasComponent,
-    VideosComponent
+    CanalBoxComponent
   ],
     imports: [
         BrowserModule,
