@@ -6,6 +6,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+span, p, h1, h2, h3, h4{
+  background-color: transparent;
+}
+
 .app_-_wrap{
   width: var(--wrapper_width);
   display: block;
