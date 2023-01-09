@@ -4,10 +4,14 @@
   margin: 0;
 }
 
+>span, >p, >h1, >h2, >h3, >h4{
+  background-color: transparent;
+}
+
 .canal_box_-_layout{
   border: 2px solid #92929D;
   display: flex;
-  width: 400px;
+  width: 481px;
   min-height: 300px;
   border-radius: 20px;
   padding: 10px 10px;
@@ -22,6 +26,9 @@
     height: 100%;
     padding: 3px 5px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .img_canal_-_foto_-_de_-_capa{
       width: 100%;
@@ -34,9 +41,8 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      left: 95px;
-      top: 125px;
       border: 6px solid #FFFFFF;
+      display: flex;
     }
   }
   .canal_box_-_header>img{
