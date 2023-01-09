@@ -36,11 +36,9 @@ export class VideoDetailsComponent implements OnInit {
       this.service.getCanal(this.video.field_canal).subscribe(canal => {
         this.canal = <any[]>canal;
         this.canal = this.canal[0]
-        console.log(this.canal)
 
         this.service.getChannelVideos(this.video.field_canal).subscribe(videos => {
           this.videos = <any[]>videos;
-          console.log(this.videos)
         })
       })
     });

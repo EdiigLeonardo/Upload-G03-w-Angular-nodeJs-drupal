@@ -1,29 +1,32 @@
 <div class="video_container" *ngIf="pronto">
-  <h2>{{video.name}}</h2>
-  <h5>#{{video.field_tags}}</h5>
-  <iframe class="video"
-          [src]="video.field_media_oembed_video">
-  </iframe>
-  <div class="video_details">
-    <img [src]="this.service.addUrlOfSrc(canal.user_picture)" class="img_user">
-    <div class="video_descricao">
-      <div class="details_user_time">
-        <div class="nome_user">{{canal.title}}</div>
-        <div class="time">{{video.field_data_upload}}</div>
+  <div class="corpo">
+    <h2>{{video.name}}</h2>
+    <h5>#{{video.field_tags}}</h5>
+    <iframe class="video"
+            [src]="video.field_media_oembed_video">
+    </iframe>
+    <div class="video_details">
+      <img [src]="this.service.addUrlOfSrc(canal.user_picture)" class="img_user">
+      <div class="video_descricao">
+        <div class="details_user_time">
+          <div class="nome_user">{{canal.title}}</div>
+          <div class="time">{{video.field_data_upload}}</div>
+        </div>
+        <fa-icon [icon]="faThumbsUp" class="like"></fa-icon>
+        |
+        <fa-icon [icon]="faThumbsDown" class="deslike"></fa-icon>
+        <div class="descricao">{{video.field_descricao}}</div>
       </div>
-      <fa-icon [icon]="faThumbsUp" class="like"></fa-icon>
-      |
-      <fa-icon [icon]="faThumbsDown" class="deslike"></fa-icon>
-      <div class="descricao">{{video.field_descricao}}</div>
     </div>
+    <app-comments></app-comments>
   </div>
   <div class="outros">
     <app-mini-video_details *ngFor="let v of videos"
                             [video_title]="v.name"
                             [canal]="v.field_canal"
                             [data_upload]="v.field_data_upload"
-
-    >
+                            [thumb]="this.service.addUrlOfSrc(v.thumbnail__target_id)"
+                            [routerLink]="['/video', v.mid]">
     </app-mini-video_details>
   </div>
 </div>

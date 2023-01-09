@@ -8,6 +8,7 @@
 .video_container {
   margin-top: 5px;
   width: 100%;
+  display: flex;
 
   .video {
 
@@ -65,6 +66,11 @@
   }
 }
 
+.corpo {
+  display: flex;
+  flex-direction: column;
+}
+
 .outros {
-  flex: 1
+  display: grid;
 }
