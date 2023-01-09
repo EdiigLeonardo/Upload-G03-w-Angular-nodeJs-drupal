@@ -38,6 +38,11 @@ export class UploadService {
     return this.http.get(BASE_URL + "/canal")
   }
 
+  getVideos(){
+    return this.http.get(BASE_URL + "/videos?limit=256");
+  }
+
+
   editTagsFromVideo(value: string){
     const list_of_values = value.split(",")
 
