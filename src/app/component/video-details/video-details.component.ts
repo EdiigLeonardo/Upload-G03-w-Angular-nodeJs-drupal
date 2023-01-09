@@ -3,7 +3,7 @@ import {faThumbsUp} from "@fortawesome/free-solid-svg-icons";
 import {faThumbsDown} from "@fortawesome/free-solid-svg-icons";
 import {UploadService} from "../../service/upload.service";
 import {ActivatedRoute} from "@angular/router";
-import {DomSanitizer, SafeUrl} from "@angular/platform-browser";
+import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-video-details',
@@ -20,7 +20,7 @@ export class VideoDetailsComponent implements OnInit {
   videos: any = {};
   pronto: boolean = false;
 
-  constructor(private route: ActivatedRoute, private service: UploadService, private sanitizer: DomSanitizer) {
+  constructor(private route: ActivatedRoute, public service: UploadService, private sanitizer: DomSanitizer) {
   }
 
   ngOnInit(): void {

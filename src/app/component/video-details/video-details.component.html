@@ -5,7 +5,7 @@
           [src]="video.field_media_oembed_video">
   </iframe>
   <div class="video_details">
-    <img [src]="canal.user_picture" class="img_user">
+    <img [src]="this.service.addUrlOfSrc(canal.user_picture)" class="img_user">
     <div class="video_descricao">
       <div class="details_user_time">
         <div class="nome_user">{{canal.title}}</div>
