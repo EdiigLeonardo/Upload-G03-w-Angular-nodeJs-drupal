@@ -1,3 +1,7 @@
-<div>
-  <h2>This is a list of channels</h2>
+<div class="canais_-_div_-_layout">
+  <app-canal-box *ngFor="let canal of channel"
+  [img_de_capa]="this.service.addUrlOfSrc(canal.field_media_image)"
+  [img_de_perfil]="this.service.addUrlOfSrc(canal.user_picture)"
+  [nome_do_canal]="canal.title"
+  [link_do_canal]="canal.nid"></app-canal-box>
 </div>

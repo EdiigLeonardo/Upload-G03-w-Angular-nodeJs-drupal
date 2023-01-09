@@ -34,6 +34,10 @@ export class UploadService {
     return this.http.get(BASE_URL + "/canal/" + id_canal)
   }
 
+  getChannels(){
+    return this.http.get(BASE_URL + "/canal")
+  }
+
   editTagsFromVideo(value: string){
     const list_of_values = value.split(",")
 

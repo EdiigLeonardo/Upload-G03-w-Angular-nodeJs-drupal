@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {UploadService} from "../../service/upload.service";
 
 @Component({
   selector: 'app-canais',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CanaisComponent implements OnInit {
 
-  constructor() { }
+  channel: any;
+
+  constructor(private route: ActivatedRoute, public service: UploadService) { }
 
   ngOnInit(): void {
-  }
 
+    this.service.getChannels().subscribe((canal)=>{
+      this.channel = canal;
+    })
+  }
 }
