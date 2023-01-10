@@ -15,7 +15,7 @@ export class PlaylistComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let id_playlist = this.route.snapshot.params['id']
+    let id_playlist = this.route.snapshot.params['id_playlist']
     this.service.getPlaylistVideos(id_playlist).subscribe(videos => {
       this.videos = <any[]>videos;
     })
