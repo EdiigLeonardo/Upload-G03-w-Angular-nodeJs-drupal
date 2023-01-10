@@ -3,6 +3,11 @@
   margin: 0;
 }
 
+.titulo{
+
+  font-weight: bold
+}
+
   .videos_page{
     display: flex;
     padding-top: 5px;
@@ -14,8 +19,16 @@
       flex: 1;
     }
 
+    .videos_grid{
+      display: grid;
+      margin-top: 20px;
+      grid-template-columns: repeat(2, 0.5fr);
+      align-items: center;
+      gap: 10px;
+    }
+
     .right-bar{
-      flex: 0.25;
+
       height: fit-content;
       flex-direction: column;
       margin: 0 10px;
