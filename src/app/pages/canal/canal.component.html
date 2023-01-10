@@ -18,8 +18,8 @@
                               [data_upload]="item.field_data_upload"
                               [video_title]="item.name"
                               [video_duration]="item.field_duracao"
-                              [tags]="this.service.editTagsFromVideo(item.field_tags)" class="channel_card_-_"
-                              [routerLink]="['/video', item.mid]"
+                              [tags]="this.service.editTagsFromVideo(item.field_tags)"
+                              [link_to_video]="item.mid"
       >
       </app-mini-video_details>
     </div>

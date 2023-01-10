@@ -1,7 +1,7 @@
 :root {
   --bg_main: #000000;
   --text_color: #ffffff;
-  --wrapper_width: 1400px;
+  --wrapper_width: 1900px;
   --bg_color_2: #1C1C24;
   --nav_height: 80px;
   --bg_color_menu: #6b6969;
@@ -16,6 +16,7 @@
   background-color: var(--bg_main);
   color:var(--text_color);
   margin: 0;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
 }
 

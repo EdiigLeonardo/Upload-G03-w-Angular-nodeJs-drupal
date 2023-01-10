@@ -15,6 +15,7 @@ export class MiniVideoComponent implements OnInit {
   @Input() video_title = "";
   @Input() video_src = "";
   @Input() canal = "";
+  @Input() link_to_video = "";
 
 
   constructor(private service: UploadService) {

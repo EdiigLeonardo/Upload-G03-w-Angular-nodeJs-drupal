@@ -1,8 +1,10 @@
 .mini_video_layout {
   background: #1C1C24;
   border-radius: 20px;
-  min-width: 412px;
-  width: 400px;
+  min-width: 212px;
+  min-height: 350px;
+  height: 350px;
+  width: 100%;
 
   .mini_video_header > img {
     object-fit: cover;
@@ -22,6 +24,7 @@
     object-fit: cover;
     border-radius: 20px 20px 0 0;
     aspect-ratio: 0.5;
+    cursor: pointer;
   }
 
   .mini_video_profile_img {
@@ -56,7 +59,7 @@
     min-height: 107px;
     padding: 5px 25px;
     margin-bottom: 10px;
-    text-align: justify;
+    text-align: start;
 
     .compacted_-_box_-_canal {
       color: #4783ee;
@@ -121,6 +124,12 @@
   .mini_video_body > * {
     background-color: #1C1C24;
   }
+}
+
+.mini_video_layout:hover{
+  transform: translateY(-5px);
+  box-shadow: 2px 4px #92929D;
+  color: #cecece;
 }
 
 

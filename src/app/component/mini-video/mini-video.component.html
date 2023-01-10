@@ -1,6 +1,6 @@
 <div class="mini_video_layout">
   <div class="mini_video_header">
-    <img [src]="thumb" class="mini_video_thumb__">
+    <img [src]="thumb" class="mini_video_thumb__" [routerLink]="['/video', link_to_video]">
     <img [src]="min_video_profile_photo" class="mini_video_profile_img" *ngIf="min_video_profile_photo">
     <span class="mini_video_duration">{{video_duration}}</span>
   </div>
