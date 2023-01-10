@@ -10,9 +10,17 @@
   width: 100%;
   display: flex;
 
-  .video {
+  .corpo {
+    position: center;
+    display: flex;
+    flex-direction: column;
+  }
 
-    border-radius: 10px 10px;
+  .video {
+    width: 934px;
+    height: 523px;
+    left: 281px;
+    top: 110px;
   }
 
   h5 {
@@ -47,7 +55,12 @@
         align-items: center;
 
         .nome_user {
-          font-size: 0.9em;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19px;
+          letter-spacing: 0.10000000149011612px;
+          text-align: left;
+
         }
 
         .time {
@@ -57,20 +70,18 @@
       }
 
       .descricao {
-        font-size: 0.9em;
-        background-color: #1d1d1d;
-        text-align: justify
+        text-align: justify;
+        width: auto;
+        padding: 10px;
+        top: 750px;
+        background: #1C1C24;
+        border-radius: 10px;
       }
     }
 
   }
 }
 
-.corpo {
-  display: flex;
-  flex-direction: column;
-}
-
 .outros {
-  display: grid;
+
 }

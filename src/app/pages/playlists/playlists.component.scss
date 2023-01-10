@@ -1,0 +1,5 @@
+.playlist-box {
+  padding: 0 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr);
+}
