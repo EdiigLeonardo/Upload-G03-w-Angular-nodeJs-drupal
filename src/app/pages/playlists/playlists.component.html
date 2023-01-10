@@ -1,6 +1,6 @@
 <div class="playlist-box">
   <app-playlist-box *ngFor="let p of playlists"
                     [img_de_capa]="this.service.addUrlOfSrc(p.field_imagem)"
-                    [nome_do_canal]="p.title"
-                    [link_do_canal]="p.nid"></app-playlist-box>
+                    [nome_da_playlist]="p.title"
+                    [link_da_playlist]="p.nid"></app-playlist-box>
 </div>

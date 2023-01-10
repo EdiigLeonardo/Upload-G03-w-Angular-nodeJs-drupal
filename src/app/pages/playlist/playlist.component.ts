@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {UploadService} from "../../service/upload.service";
 
 @Component({
   selector: 'app-playlist',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlaylistComponent implements OnInit {
 
-  constructor() { }
+  videos: any = {};
+
+  constructor(private route: ActivatedRoute, public service: UploadService) {
+  }
 
   ngOnInit(): void {
+    let id_playlist = this.route.snapshot.params['id']
+    this.service.getPlaylistVideos(id_playlist).subscribe(videos => {
+      this.videos = <any[]>videos;
+    })
   }
 
 }

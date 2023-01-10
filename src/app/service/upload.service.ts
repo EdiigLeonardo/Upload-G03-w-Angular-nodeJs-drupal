@@ -43,6 +43,10 @@ export class UploadService {
     return this.http.get(BASE_URL + "/playlists")
   }
 
+  getPlaylistVideos(id_playlist: number) {
+    return this.http.get(BASE_URL + "/playlist/videos/" + id_playlist)
+  }
+
   getVideos() {
     return this.http.get(BASE_URL + "/videos?limit=256");
   }
