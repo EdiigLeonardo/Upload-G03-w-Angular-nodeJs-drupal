@@ -17,7 +17,7 @@
   border-radius: 10px;
   padding: 5px;
   height: 500px;
-  width: 1000px;
+  width: 100%;
 
   .home_box_header{
     display: flex;
@@ -74,7 +74,7 @@
       font-family: 'Roboto', serif;
       font-style: normal;
       font-weight: 400;
-      font-size: 14px;
+      font-size: 0.9em;
       line-height: 16px;
       letter-spacing: 0.1px;
       color: #1E75FF;
@@ -86,6 +86,7 @@
       width: 100%;
       background-color: transparent;
       text-align: start;
+      margin-top: 10px;
     }
 
     .home_box_footer{
