@@ -2,9 +2,14 @@
   <p class="titulo">Canais sugeridos</p>
 </div>
 
-<div>
+<div *ngFor="let item of canal">
 
-
+  <div >
+    <img [src]="this.service.addUrlOfSrc(canal.user_picture)" >
+  </div>
+  <div>
+      <h2>{{canal.title}}</h2>
+  </div>
 
 </div>
 

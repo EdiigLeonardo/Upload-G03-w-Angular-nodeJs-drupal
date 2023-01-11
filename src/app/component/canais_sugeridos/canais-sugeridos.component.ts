@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 import {UploadService} from "../../service/upload.service";
 
 @Component({
@@ -9,12 +10,18 @@ import {UploadService} from "../../service/upload.service";
 
 export class CanaisSugeridosComponent implements OnInit {
 
-  title: any;
-  constructor(private service: UploadService) { }
+
+  canal:any;
+  channel:any;
+
+  constructor(private route: ActivatedRoute, public service: UploadService) { }
 
   ngOnInit(): void {
-/*    this.service.getCanaisSugeridos().subscribe((title)=>{
-      this.title = <any[]> title;
-    })*/
+
+
+
+    this.service.getCanaisSugeridos().subscribe((canal)=>{
+      this.channel = canal;
+    })
   }
 }
