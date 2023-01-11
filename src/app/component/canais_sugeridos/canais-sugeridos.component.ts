@@ -13,8 +13,8 @@ export class CanaisSugeridosComponent implements OnInit {
   constructor(private service: UploadService) { }
 
   ngOnInit(): void {
-    this.service.getCanaisSugeridos().subscribe((title)=>{
+/*    this.service.getCanaisSugeridos().subscribe((title)=>{
       this.title = <any[]> title;
-    })
+    })*/
   }
 }
