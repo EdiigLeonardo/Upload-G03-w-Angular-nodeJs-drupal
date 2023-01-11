@@ -25,14 +25,15 @@
       grid-template-columns: repeat(2, 0.5fr);
       align-items: center;
       gap: 10px;
+
     }
 
     .right-bar{
-
       height: fit-content;
       flex-direction: column;
       margin: 0 10px;
-      width: 300px;
+      width: 330px;
+
     }
   }
 
