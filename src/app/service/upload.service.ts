@@ -31,6 +31,10 @@ export class UploadService {
     return this.http.get(BASE_URL + "/canal/videos/" + id_canal)
   }
 
+  getCard(id_canal: number) {
+    return this.http.get(BASE_URL + "/canal/videos2/" + id_canal)
+  }
+
   getChannel(id_canal: number) {
     return this.http.get(BASE_URL + "/canal/" + id_canal)
   }
@@ -52,10 +56,17 @@ export class UploadService {
   }
 
   getCanaisSugeridos() {
-    return this.http.get(BASE_URL + "/canais_sugeridos")
+    return this.http.get(BASE_URL + "/canais_sugeridos");
+  }
+
+  getComentariosVideo(id: number) {
+    return this.http.get(BASE_URL + "/comentarios_do_video/" + id);
   }
 
 
+  getComentariosCanal(id: number) {
+    return this.http.get(BASE_URL + "/comentarios_do_canal/" + id);
+  }
 
 
   editTagsFromVideo(value: string) {

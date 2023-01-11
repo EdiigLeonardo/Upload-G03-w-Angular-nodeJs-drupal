@@ -15,6 +15,7 @@ export class VideoDetailsComponent implements OnInit {
   faThumbsDown = faThumbsDown;
   video: any = {};
   canal: any = {};
+  comment: any = {};
 
 
   videos: any = {};
@@ -24,25 +25,33 @@ export class VideoDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let id_video = this.route.snapshot.params['id'];
-    this.service.getVideo(id_video).subscribe(video => {
-      this.video = <any[]>video;
-      this.video = this.video[0]
-      this.video.field_media_oembed_video = this.video.field_media_oembed_video.replace('watch?v=', 'embed/')
-      this.video.field_media_oembed_video = this.sanitizer.bypassSecurityTrustResourceUrl(this.video.field_media_oembed_video)
+    this.route.params.subscribe(q => {
+      let id_video = q["id"];
+      this.service.getVideo(id_video).subscribe(video => {
+        this.video = <any[]>video;
+        this.video = this.video[0]
+        this.video.field_media_oembed_video = this.video.field_media_oembed_video.replace('watch?v=', 'embed/')
+        this.video.field_media_oembed_video = this.sanitizer.bypassSecurityTrustResourceUrl(this.video.field_media_oembed_video)
 
-      this.video.field_tags = this.video.field_tags.replaceAll(', ', ' #')
+        this.video.field_tags = this.video.field_tags.replaceAll(', ', ' #')
 
-      this.service.getCanal(this.video.field_canal).subscribe(canal => {
-        this.canal = <any[]>canal;
-        this.canal = this.canal[0]
+        this.service.getCanal(this.video.field_canal).subscribe(canal => {
+          this.canal = <any[]>canal;
+          this.canal = this.canal[0]
 
-        this.service.getChannelVideos(this.video.field_canal).subscribe(videos => {
-          this.videos = <any[]>videos;
+          this.service.getCard(this.video.field_canal).subscribe(videos => {
+            this.videos = <any[]>videos;
+
+            this.service.getComentariosVideo(this.video.mid).subscribe(comment => {
+              this.comment = <any[]>comment;
+              this.comment = this.comment[0];
+              console.log(this.comment)
+            })
+          })
         })
-      })
+      });
+      this.pronto = true;
     });
-    this.pronto = true;
   }
 
 }

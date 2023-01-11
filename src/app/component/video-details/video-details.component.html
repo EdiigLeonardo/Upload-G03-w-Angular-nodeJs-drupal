@@ -6,10 +6,11 @@
             [src]="video.field_media_oembed_video">
     </iframe>
     <div class="video_details">
-      <img [src]="this.service.addUrlOfSrc(canal.user_picture)" class="img_user">
+      <img [src]="this.service.addUrlOfSrc(canal.user_picture)" class="img_user"
+           [routerLink]="['/canal', video.field_canal]">
       <div class="video_descricao">
         <div class="details_user_time">
-          <div class="nome_user">{{canal.title}}</div>
+          <div class="nome_user" [routerLink]="['/canal', video.field_canal]">{{canal.title}}</div>
           <div class="time">{{video.field_data_upload}}</div>
         </div>
         <fa-icon [icon]="faThumbsUp" class="like"></fa-icon>
@@ -19,14 +20,20 @@
       </div>
     </div>
     <app-comments></app-comments>
+    <app-comment *ngFor="let c of comment"
+                 [comment]="c.field_comentario"
+                 [data_upload]="c.field_data_de_upload">
+
+
+    </app-comment>
   </div>
   <div class="outros">
-    <app-mini-video_details *ngFor="let v of videos"
+    <app-mini-video_details *ngFor="let v of videos" class="unico"
                             [video_title]="v.name"
                             [canal]="v.field_canal"
                             [data_upload]="v.field_data_upload"
                             [thumb]="this.service.addUrlOfSrc(v.thumbnail__target_id)"
-                            [routerLink]="['/video', v.mid]">
+                            [link_to_video]="v.mid">
     </app-mini-video_details>
   </div>
 </div>
