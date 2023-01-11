@@ -1,1 +1,11 @@
-<p>playlist works!</p>
+<div class="playlist">
+  <app-mini-video_details *ngFor="let v of videos"
+                          [thumb]="this.service.addUrlOfSrc(v.thumbnail__target_id)"
+                          [data_upload]="v.field_data_upload"
+                          [video_title]="v.name"
+                          [video_duration]="v.field_duracao"
+                          [tags]="this.service.editTagsFromVideo(v.field_tags)"
+                          [link_to_video]="v.mid"
+  >
+  </app-mini-video_details>
+</div>

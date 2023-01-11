@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute} from "@angular/router";
 
@@ -12,55 +12,57 @@ const MEDIA_LINK = "https://dev-upload-project-03.pantheonsite.io/sites/default/
 })
 
 export class UploadService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   getTags() {
     return this.http.get(BASE_URL + "/tags?t=" + Date.now());
   }
 
-  getCanal(id_canal:number){
+  getCanal(id_canal: number) {
     return this.http.get(BASE_URL + "/canal/" + id_canal);
   }
 
-  getVideo(id_video:number){
+  getVideo(id_video: number) {
     return this.http.get(BASE_URL + "/video/" + id_video);
   }
 
-  getChannelVideos(id_canal:number){
+  getChannelVideos(id_canal: number) {
     return this.http.get(BASE_URL + "/canal/videos/" + id_canal)
   }
 
-  getChannel(id_canal:number){
+  getChannel(id_canal: number) {
     return this.http.get(BASE_URL + "/canal/" + id_canal)
   }
 
-  getChannels(){
+  getChannels() {
     return this.http.get(BASE_URL + "/canal")
   }
 
-  getCanaisSugeridos(){
-    return this.http.get(BASE_URL + "/canais_sugeridos")
+  getPlaylists() {
+    return this.http.get(BASE_URL + "/playlists")
   }
 
-  getVideos(){
+  getPlaylistVideos(id_playlist: number) {
+    return this.http.get(BASE_URL + "/playlist/videos/" + id_playlist)
+  }
+
+  getVideos() {
     return this.http.get(BASE_URL + "/videos?limit=256");
   }
 
 
-  editTagsFromVideo(value: string){
+  editTagsFromVideo(value: string) {
     const list_of_values = value.split(",")
 
-    let result = list_of_values.map((value)=>{
+    let result = list_of_values.map((value) => {
       return "#" + value + " "
     })
     return result.join("")
   }
 
-  addUrlOfSrc(url: string){
+  addUrlOfSrc(url: string) {
     return PANTHEON_URL + url;
   }
 
-  addMedia(media:string){
-    return MEDIA_LINK + media;
-  }
 }

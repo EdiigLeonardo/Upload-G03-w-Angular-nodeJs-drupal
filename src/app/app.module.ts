@@ -16,13 +16,15 @@ import {HttpClientModule} from "@angular/common/http";
 import { VideoComponent } from './pages/video/video.component';
 import { VideoDetailsComponent } from './component/video-details/video-details.component';
 import { HomeComponent } from './pages/home/home.component';
-import { CanaisSugeridosComponent } from './component/canais_sugeridos/canais-sugeridos.component';
+//import { CanaisSugeridosComponent } from './component/canais_sugeridos/canais-sugeridos.component';
 import { PlaylistsComponent } from './pages/playlists/playlists.component';
 import { TematicasComponent } from './pages/tematicas/tematicas.component';
 import { CanalComponent } from './pages/canal/canal.component';
 import { CanaisComponent } from './pages/canais/canais.component';
 import { TematicasSugeridasComponent } from './component/tematicas-sugeridas/tematicas-sugeridas.component';
 import { CanalBoxComponent } from './component/canal-box/canal-box.component';
+import { PlaylistBoxComponent } from './component/playlist-box/playlist-box.component';
+import { VideoHomeBoxComponent } from './component/video-home-box/video-home-box.component';
 
 
 
@@ -39,13 +41,14 @@ import { CanalBoxComponent } from './component/canal-box/canal-box.component';
     VideoComponent,
     VideoDetailsComponent,
     HomeComponent,
-    CanaisSugeridosComponent,
     PlaylistsComponent,
     TematicasComponent,
     CanalComponent,
     CanaisComponent,
     TematicasSugeridasComponent,
-    CanalBoxComponent
+    CanalBoxComponent,
+    PlaylistBoxComponent,
+    VideoHomeBoxComponent
   ],
     imports: [
         BrowserModule,
