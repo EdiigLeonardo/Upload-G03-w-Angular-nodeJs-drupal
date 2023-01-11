@@ -25,6 +25,7 @@ import { TematicasSugeridasComponent } from './component/tematicas-sugeridas/tem
 import { CanalBoxComponent } from './component/canal-box/canal-box.component';
 import { PlaylistBoxComponent } from './component/playlist-box/playlist-box.component';
 import { VideoHomeBoxComponent } from './component/video-home-box/video-home-box.component';
+import { TagVideosComponent } from './pages/tag-videos/tag-videos.component';
 
 
 
@@ -49,7 +50,8 @@ import { VideoHomeBoxComponent } from './component/video-home-box/video-home-box
     TematicasSugeridasComponent,
     CanalBoxComponent,
     PlaylistBoxComponent,
-    VideoHomeBoxComponent
+    VideoHomeBoxComponent,
+    TagVideosComponent
   ],
     imports: [
         BrowserModule,

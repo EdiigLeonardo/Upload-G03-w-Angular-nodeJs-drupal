@@ -13,7 +13,7 @@ export class CommentComponent implements OnInit {
   @Input() comment = "";
   @Input() data_upload = "";
 
-  constructor(private service: UploadService) {
+  constructor(public service: UploadService) {
   }
 
   ngOnInit(): void {

@@ -19,6 +19,10 @@ export class UploadService {
     return this.http.get(BASE_URL + "/tags?t=" + Date.now());
   }
 
+  getTagsVideos(id_tag: number) {
+    return this.http.get(BASE_URL + "/tag/videos/" + id_tag);
+  }
+
   getCanal(id_canal: number) {
     return this.http.get(BASE_URL + "/canal/" + id_canal);
   }

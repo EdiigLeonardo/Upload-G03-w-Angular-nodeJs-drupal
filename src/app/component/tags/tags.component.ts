@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {UploadService} from "../../service/upload.service";
 
 @Component({
@@ -10,11 +10,14 @@ import {UploadService} from "../../service/upload.service";
 export class TagsComponent implements OnInit {
 
   tags: any;
-  constructor(private service: UploadService) { }
+
+  constructor(private service: UploadService) {
+  }
 
   ngOnInit(): void {
-    this.service.getTags().subscribe((tags)=>{
-      this.tags = <any[]> tags;
+    this.service.getTags().subscribe((tags) => {
+      this.tags = <any[]>tags;
+      console.log(this.tags)
     })
-}
+  }
 }
