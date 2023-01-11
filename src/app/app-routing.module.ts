@@ -7,6 +7,7 @@ import {PlaylistsComponent} from "./pages/playlists/playlists.component";
 import {CanalComponent} from "./pages/canal/canal.component";
 import {CanaisComponent} from "./pages/canais/canais.component";
 import {PlaylistComponent} from "./pages/playlist/playlist.component";
+import {CanaisSugeridosComponent} from "./component/canais_sugeridos/canais-sugeridos.component";
 
 const routes: Routes = [
   {path: 'video/:id', component: VideoComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'canais', component: CanaisComponent},
   {path: 'tematicas', component: TematicasComponent},
   {path: 'playlists', component: PlaylistsComponent},
-  {path: 'playlist/:id_playlist', component: PlaylistComponent}
+  {path: 'playlist/:id_playlist', component: PlaylistComponent},
+  {path: 'canais_sugeridos', component: CanaisSugeridosComponent}
 ];
 
 @NgModule({

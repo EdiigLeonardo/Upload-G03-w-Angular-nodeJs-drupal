@@ -51,6 +51,12 @@ export class UploadService {
     return this.http.get(BASE_URL + "/videos?limit=256");
   }
 
+  getCanaisSugeridos() {
+    return this.http.get(BASE_URL + "/canais_sugeridos")
+  }
+
+
+
 
   editTagsFromVideo(value: string) {
     const list_of_values = value.split(",")
