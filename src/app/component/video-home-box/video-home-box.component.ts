@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {faBookmark} from "@fortawesome/free-regular-svg-icons";
+import {faShareNodes} from "@fortawesome/free-solid-svg-icons";
 import {faBookmark as faBookmarkSolid} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
@@ -11,6 +12,7 @@ export class VideoHomeBoxComponent implements OnInit {
 
   faBookmark = faBookmark;
   faBookmarkSolid = faBookmarkSolid;
+  faShareNodes = faShareNodes;
 
   constructor() { }
 
