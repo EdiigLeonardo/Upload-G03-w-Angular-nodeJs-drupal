@@ -7,9 +7,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class PlaylistBoxComponent implements OnInit {
   @Input() img_de_capa = "";
-  @Input() img_de_perfil = "";
   @Input() nome_da_playlist = "";
-  @Input() link_da_playlist = "";
+  @Input() link = "";
 
   constructor() {
   }

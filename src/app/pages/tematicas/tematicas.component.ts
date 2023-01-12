@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UploadService} from "../../service/upload.service";
 
 @Component({
   selector: 'app-tematicas',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TematicasComponent implements OnInit {
 
-  constructor() { }
+  tematicas: any;
 
-  ngOnInit(): void {
+  constructor(public service: UploadService) {
   }
 
+  ngOnInit(): void {
+    this.service.getTematicas().subscribe((tematica) => {
+      this.tematicas = tematica;
+      console.log(this.tematicas)
+    })
+  }
 }

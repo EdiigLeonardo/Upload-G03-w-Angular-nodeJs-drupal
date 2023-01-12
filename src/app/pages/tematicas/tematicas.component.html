@@ -1,3 +1,7 @@
-<div>
-  
+<div class="tematicas-box">
+  <app-tematicas-box *ngFor="let p of tematicas"
+                     [img_de_capa]="this.service.addUrlOfSrc(p.field_imagem)"
+                     [nome]="p.title"
+                     [link]="p.nid"></app-tematicas-box>
 </div>
+

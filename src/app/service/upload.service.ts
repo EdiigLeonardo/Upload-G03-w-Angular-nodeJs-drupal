@@ -47,6 +47,10 @@ export class UploadService {
     return this.http.get(BASE_URL + "/canal")
   }
 
+  getTematicas() {
+    return this.http.get(BASE_URL + "/tematicas")
+  }
+
   getPlaylists() {
     return this.http.get(BASE_URL + "/playlists")
   }

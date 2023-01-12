@@ -9,6 +9,7 @@ import {CanaisComponent} from "./pages/canais/canais.component";
 import {PlaylistComponent} from "./pages/playlist/playlist.component";
 import {CanaisSugeridosComponent} from "./component/canais_sugeridos/canais-sugeridos.component";
 import {TagVideosComponent} from "./pages/tag-videos/tag-videos.component";
+import {TematicaComponent} from "./pages/tematica/tematica.component";
 
 const routes: Routes = [
   {path: 'video/:id', component: VideoDetailsComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'canal/:id_canal', component: CanalComponent},
   {path: 'canais', component: CanaisComponent},
   {path: 'tematicas', component: TematicasComponent},
+  {path: 'tematicas/:id_tematica', component: TematicaComponent},
   {path: 'playlists', component: PlaylistsComponent},
   {path: 'playlist/:id_playlist', component: PlaylistComponent},
   {path: 'canais_sugeridos', component: CanaisSugeridosComponent},
