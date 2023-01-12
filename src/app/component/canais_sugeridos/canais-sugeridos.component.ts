@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {UploadService} from "../../service/upload.service";
 
@@ -9,10 +9,8 @@ import {UploadService} from "../../service/upload.service";
 })
 
 export class CanaisSugeridosComponent implements OnInit {
+  canais:any;
 
-
-  canal:any;
-  channel:any;
 
   constructor(private route: ActivatedRoute, public service: UploadService) { }
 
@@ -20,8 +18,8 @@ export class CanaisSugeridosComponent implements OnInit {
 
 
 
-    this.service.getCanaisSugeridos().subscribe((canal)=>{
-      this.channel = canal;
+    this.service.getCanaisSugeridos().subscribe((canais)=>{
+      this.canais = canais;
     })
   }
 }

@@ -56,7 +56,7 @@ export class UploadService {
   }
 
   getVideos() {
-    return this.http.get(BASE_URL + "/videos?limit=256");
+    return this.http.get(BASE_URL + "/video");
   }
 
   getCanaisSugeridos() {
