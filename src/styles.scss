@@ -1,7 +1,8 @@
 :root {
   --bg_main: #000000;
   --text_color: #ffffff;
-  --wrapper_width: 1700px;
+  --wrapper_width: 1600px;
+  --wrapper_width_menu: 400px;
   --bg_color_2: #1C1C24;
   --nav_height: 80px;
   --bg_color_menu: #6b6969;
@@ -18,6 +19,7 @@
 
 body{
   background-color: var(--bg_main);
+  width: var(--wrapper_width);
   color: var(--text_color);
   margin: 0;
   padding: 0;

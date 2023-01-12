@@ -1,7 +1,5 @@
 *{
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 >span, >p, >h1, >h2, >h3, >h4{
@@ -75,6 +73,7 @@
       border: 2px solid #92929D;
       background-color: #B2191B;
       cursor: pointer;
+      color: white;
     }
     .canal_box_-_footer_-_btn:hover{
       transform: translateY(-5px);

@@ -1,7 +1,6 @@
 *{
   box-sizing: border-box;
   color: var(--text_color);
-  margin: 0;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -11,23 +10,20 @@
 
 .app_-_wrap{
   display: block;
-  
-  position: relative;
   padding: 10px 10px;
+  max-width: var(--wrapper_width);
 
   .app_layout{
     display: flex;
-    padding-top: 5px;
+    width: 100%;
     max-width: var(--wrapper_width);
 
     .app_menu{
-      flex: 0.25;
       height: fit-content;
     }
 
     .app_pages_container{
       margin: 5px;
-      padding: 0 5px;
     }
 
   }
