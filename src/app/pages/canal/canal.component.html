@@ -25,11 +25,11 @@
     </div>
     <div class="menu_comentarios">
       <app-comments></app-comments>
-      <app-comment *ngFor="let c of comment"
-                   [comment]="c.field_comentario"
-                   [data_upload]="c.field_data_de_upload">
-      </app-comment>
     </div>
+    <app-comment *ngFor="let c of comment"
+                 [comment]="c.field_comentario"
+                 [data_upload]="c.field_data_de_upload">
+    </app-comment>
   </div>
 </div>
 

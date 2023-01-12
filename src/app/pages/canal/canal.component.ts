@@ -26,7 +26,7 @@ export class CanalComponent implements OnInit {
       this.channel = canal;
     })
 
-    this.service.getComentariosVideo(this.channel.mid).subscribe(comment => {
+    this.service.getComentariosCanal(this.channel.mid).subscribe(comment => {
       this.comment = <any[]>comment;
       console.log(this.comment)
     })
