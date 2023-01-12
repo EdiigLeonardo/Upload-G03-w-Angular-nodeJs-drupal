@@ -1,0 +1,7 @@
+<app-mini-video_details *ngFor="let t of tags"
+                        [video_title]="t.name"
+                        [canal]="t.field_canal"
+                        [data_upload]="t.field_data_upload"
+                        [thumb]="this.service.addUrlOfSrc(t.thumbnail__target_id)"
+                        [link_to_video]="t.mid">
+</app-mini-video_details>

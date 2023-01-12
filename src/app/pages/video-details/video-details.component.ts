@@ -44,7 +44,6 @@ export class VideoDetailsComponent implements OnInit {
 
             this.service.getComentariosVideo(this.video.mid).subscribe(comment => {
               this.comment = <any[]>comment;
-              this.comment = this.comment[0];
               console.log(this.comment)
             })
           })

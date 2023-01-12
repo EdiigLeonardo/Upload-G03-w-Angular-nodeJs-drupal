@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {UploadService} from "../../service/upload.service";
 
@@ -10,19 +10,25 @@ import {UploadService} from "../../service/upload.service";
 export class CanalComponent implements OnInit {
   channelVideos: any;
   channel: any;
+  comment: any = {};
 
-  constructor(private route: ActivatedRoute, public service: UploadService) { }
+  constructor(private route: ActivatedRoute, public service: UploadService) {
+  }
 
   ngOnInit(): void {
     let id_canal = this.route.snapshot.params['id_canal'];
 
-    this.service.getChannelVideos(id_canal).subscribe((videos)=>{
+    this.service.getChannelVideos(id_canal).subscribe((videos) => {
       this.channelVideos = videos;
     })
 
-    this.service.getChannel(id_canal).subscribe((canal)=>{
+    this.service.getChannel(id_canal).subscribe((canal) => {
       this.channel = canal;
     })
-  }
 
+    this.service.getComentariosVideo(this.channel.mid).subscribe(comment => {
+      this.comment = <any[]>comment;
+      console.log(this.comment)
+    })
+  }
 }

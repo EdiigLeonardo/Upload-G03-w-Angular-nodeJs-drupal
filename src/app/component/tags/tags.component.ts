@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UploadService} from "../../service/upload.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-tags',

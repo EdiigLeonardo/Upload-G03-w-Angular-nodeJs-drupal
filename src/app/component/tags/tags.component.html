@@ -1,7 +1,7 @@
 <h2 class="tags_header__">Tags</h2>
 <div class="tags_layout">
   <span class="tag_items_layout" *ngFor="let item of tags"
-        [routerLink]="['/tag', tags.name]">{{item.name}}</span>
+        [routerLink]="['/tag', item.tid]">{{item.name}}</span>
 </div>
 
 
