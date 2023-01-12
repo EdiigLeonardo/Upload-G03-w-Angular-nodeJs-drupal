@@ -1,9 +1,6 @@
 .mini_video_layout {
   background: #1C1C24;
   border-radius: 20px;
-  min-width: 212px;
-  min-height: 350px;
-  height: 350px;
   width: 100%;
 
   .mini_video_header > img {
@@ -11,28 +8,28 @@
   }
 
   .mini_video_header {
-    min-width: 100px;
-    min-height: 100px;
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 50%;
   }
 
   .mini_video_thumb__ {
     width: 100%;
-    height: 210px;
+/*    height: 210px;*/
     object-fit: cover;
     border-radius: 20px 20px 0 0;
     aspect-ratio: 0.5;
     cursor: pointer;
+    height: 200px;
   }
 
   .mini_video_profile_img {
     position: absolute;
-    width: 69.72px;
-    height: 69.65px;
-    left: 344.23px;
-    top: 176px;
+    object-fit: cover;
+    right: 48px;
+    top: 190px;
+    border: 6px solid #ececec;
     border-radius: 50%;
   }
 
@@ -49,6 +46,7 @@
     text-align: center;
     color: #FFFFFF;
     border-radius: 5px;
+    background-color: #000000FF;
   }
 
   .mini_video_body {
@@ -56,10 +54,14 @@
     flex-direction: column;
     border-radius: 20px 20px;
     background-color: #1C1C24;
-    min-height: 107px;
     padding: 5px 25px;
     margin-bottom: 10px;
     text-align: start;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 400px;
 
     .compacted_-_box_-_canal {
       color: #4783ee;
@@ -99,14 +101,17 @@
     }
 
     .mini_video_body_-_title {
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 18px;
       line-height: 27px;
       color: #FAFAFB;
       margin-bottom: 2px;
-      min-height: 80px;
+      min-height: 30px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .mini_video_body_-_timestamp {

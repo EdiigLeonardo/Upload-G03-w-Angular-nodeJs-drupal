@@ -1,7 +1,7 @@
 :root {
   --bg_main: #000000;
   --text_color: #ffffff;
-  --wrapper_width: 1900px;
+  --wrapper_width: 1700px;
   --bg_color_2: #1C1C24;
   --nav_height: 80px;
   --bg_color_menu: #6b6969;
@@ -9,6 +9,7 @@
   --menu_font_color: #B5B5BE;
   --text_span_color_: #FAFAFB;
   --borders-colors: #292932;
+
 }
 
 *{
@@ -37,5 +38,10 @@ img{
 body{
   width: 100%;
 }
+
+input{
+  background-color: black;
+}
+
 
 

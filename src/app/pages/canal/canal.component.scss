@@ -5,6 +5,7 @@
 
 .channel_layout_{
   padding: 10px 5px;
+  width: 100%;
 
   .profile_info_img__{
     position: relative;
@@ -48,8 +49,7 @@
     }
 
     .channel_profile_description{
-      min-width: 700px;
-      width: 60%;
+      width: 100%;
       min-height: 60px;
       max-height: 70px;
       font-style: normal;
@@ -65,7 +65,7 @@
   .channel_grid_videos__{
     display: grid;
     margin-top: 20px;
-    grid-template-columns: repeat(3, 0.5fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 10px;
   }
