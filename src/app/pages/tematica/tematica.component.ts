@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {UploadService} from "../../service/upload.service";
 
 @Component({
   selector: 'app-tematica',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TematicaComponent implements OnInit {
 
-  constructor() { }
+  tematica: any = {};
 
-  ngOnInit(): void {
+  constructor(private route: ActivatedRoute, public service: UploadService) {
   }
 
+  ngOnInit(): void {
+    let id_tematica = this.route.snapshot.params['id_tematica']
+    this.service.getTematica(id_tematica).subscribe(tematica => {
+      this.tematica = <any[]>tematica;
+      console.log(this.tematica)
+    })
+  }
 }

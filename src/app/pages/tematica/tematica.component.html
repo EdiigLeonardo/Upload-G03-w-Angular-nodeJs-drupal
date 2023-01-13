@@ -1,1 +1,11 @@
-<p>tematica works!</p>
+<div class="tematica">
+  <app-mini-video_details *ngFor="let t of tematica"
+                          [thumb]="this.service.addUrlOfSrc(t.field_imagem_1)"
+                          [data_upload]="t.field_data_upload"
+                          [video_title]="t.title"
+                          [video_duration]="t.field_duracao"
+                          [tags]="this.service.editTagsFromVideo(t.field_tags)"
+                          [link_to_video]="t.nid"
+  >
+  </app-mini-video_details>
+</div>

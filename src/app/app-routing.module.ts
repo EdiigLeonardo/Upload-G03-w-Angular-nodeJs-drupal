@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: 'canal/:id_canal', component: CanalComponent},
   {path: 'canais', component: CanaisComponent},
   {path: 'tematicas', component: TematicasComponent},
-  {path: 'tematicas/:id_tematica', component: TematicaComponent},
+  {path: 'tematica/:id_tematica', component: TematicaComponent},
   {path: 'playlists', component: PlaylistsComponent},
   {path: 'playlist/:id_playlist', component: PlaylistComponent},
   {path: 'canais_sugeridos', component: CanaisSugeridosComponent},

@@ -9,7 +9,7 @@ import {UploadService} from "../../service/upload.service";
 })
 export class CanalComponent implements OnInit {
   channelVideos: any;
-  channel: any;
+  channel: any = {};
   comment: any = {};
 
   constructor(private route: ActivatedRoute, public service: UploadService) {
@@ -26,7 +26,7 @@ export class CanalComponent implements OnInit {
       this.channel = canal;
     })
 
-    this.service.getComentariosCanal(this.channel.mid).subscribe(comment => {
+    this.service.getComentariosCanal(id_canal).subscribe(comment => {
       this.comment = <any[]>comment;
       console.log(this.comment)
     })

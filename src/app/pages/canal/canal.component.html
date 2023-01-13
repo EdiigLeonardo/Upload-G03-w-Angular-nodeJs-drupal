@@ -27,6 +27,7 @@
       <app-comments></app-comments>
     </div>
     <app-comment *ngFor="let c of comment"
+                 [name]="c.field_nome" , [name]="c.title"
                  [comment]="c.field_comentario"
                  [data_upload]="c.field_data_de_upload">
     </app-comment>

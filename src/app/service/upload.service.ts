@@ -51,6 +51,10 @@ export class UploadService {
     return this.http.get(BASE_URL + "/tematicas")
   }
 
+  getTematica(id_tematica: number) {
+    return this.http.get(BASE_URL + "/tematica" + id_tematica)
+  }
+
   getPlaylists() {
     return this.http.get(BASE_URL + "/playlists")
   }
@@ -75,7 +79,6 @@ export class UploadService {
   getComentariosCanal(id: number) {
     return this.http.get(BASE_URL + "/comentarios_do_canal/" + id);
   }
-
 
   editTagsFromVideo(value: string) {
     const list_of_values = value.split(",")
