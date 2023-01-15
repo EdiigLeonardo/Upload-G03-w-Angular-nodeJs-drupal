@@ -16,7 +16,6 @@ a{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  border: 1px solid #292932;
   color: var(--menu_font_color);
 
   .menu_header{
@@ -30,6 +29,7 @@ a{
     display: flex;
     gap: 20px;
     align-items: center;
+    border: 1px solid #292932;
 
     .icon_nav{
       width: 25px;
@@ -109,5 +109,13 @@ a{
   fa-icon{
     color: var(--menu_font_color);
   }
+
+  .menu_layout_-_toogle{
+    border: 1px solid #292932;
+    height: 100%;
+  }
 }
 
+@media screen and (max-width: 600px) {
+
+}

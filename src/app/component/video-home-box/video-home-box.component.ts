@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {faBookmark} from "@fortawesome/free-regular-svg-icons";
 import {faShareNodes} from "@fortawesome/free-solid-svg-icons";
 import {faBookmark as faBookmarkSolid} from "@fortawesome/free-solid-svg-icons";
@@ -13,6 +13,15 @@ export class VideoHomeBoxComponent implements OnInit {
   faBookmark = faBookmark;
   faBookmarkSolid = faBookmarkSolid;
   faShareNodes = faShareNodes;
+  @Input() thumb = "";
+  @Input() min_video_profile_photo = "";
+  @Input() video_duration = "";
+  @Input() tags = "";
+  @Input() data_upload = "";
+  @Input() video_title = "";
+  @Input() video_src = "";
+  @Input() canal = "";
+  @Input() link_to_video = "";
 
   constructor() { }
 

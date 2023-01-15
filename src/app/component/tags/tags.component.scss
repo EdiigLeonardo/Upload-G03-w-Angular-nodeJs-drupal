@@ -5,28 +5,26 @@
 
 .tags_layout{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  height: 12px;
-  gap: 2px 15px;
-  padding: 0 20px;
-  object-fit: cover;
+  grid-template-columns: repeat(3, calc(100% / 3));
+  height: 100%;
+  width: 100%;
+  padding: 0 5px;
   background-color: transparent;
 
   .tag_items_layout{
     display: flex;
     font-size: 0.7em;
     border: 1px solid var(--borders-colors);
-    min-width: 76px;
-    width: 100%;
-    min-height: 27px;
     margin: 5px 5px;
     align-items: center;
     cursor: pointer;
     text-align: center;
     justify-content: center;
     border-radius: 5px;
+    height: 35px;
     background-color: transparent;
     padding: 6px 10px;
+    text-overflow: ellipsis;
   }
 
   .tag_items_layout:hover{

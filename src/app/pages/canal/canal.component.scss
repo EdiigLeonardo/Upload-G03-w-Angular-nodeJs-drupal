@@ -5,36 +5,37 @@
 
 .channel_layout_{
   padding: 10px 5px;
-  width: 100%;
+  flex: 1;
 
-  .profile_info_img__{
+  .profile_infos_{
     position: relative;
-    flex: 1;
-    height: 292.13px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: inset 0 7em #292932;
-    object-position: 80% 25%;
-  }
+    height: 100%;
 
-  .user_info_img__{
-    position: absolute;
-    object-fit: cover;
-    width: 200px;
-    height: 200px;
-    left: 80%;
-    right: 20px;
-    top: 192px;
-    border: 6px solid #ececec;
-    border-radius: 50%;
+    .profile_info_img__{
+      max-height: 292.13px;
+      object-fit: cover;
+      border-radius: 15px;
+      object-position: 80% 25%;
+      min-width: 1206px;
+    }
+
+    .user_info_img__{
+      position: absolute;
+      object-fit: cover;
+      width: 14rem;
+      height: 14rem;
+      bottom: -25%;
+      right: 2%;
+      border: 6px solid #ececec;
+      border-radius: 50%;
+    }
   }
   .channel_br_division_100{
     width: 100%;
     padding: 20px 15px;
     border-bottom: 1px solid var(--borders-colors);
     margin-bottom: 5px;
-    height: 233px;
-    align-items: center;
+    height: min-content;
 
     .channel_profile_name{
       min-width: 343px;
@@ -50,7 +51,6 @@
 
     .channel_profile_description{
       width: 100%;
-      min-height: 60px;
       max-height: 70px;
       font-style: normal;
       font-weight: 400;
@@ -59,13 +59,19 @@
       text-align: justify;
       letter-spacing: 0.2px;
       color: var(--menu_font_color);
+      text-overflow: clip;
+      overflow-y: auto;
+    }
+    .channel_profile_description::-webkit-scrollbar{
+      width: 0.8em;
+      color: #292932;
     }
   }
 
   .channel_grid_videos__{
     display: grid;
     margin-top: 20px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, calc(100% / 3));
     align-items: center;
     gap: 10px;
   }

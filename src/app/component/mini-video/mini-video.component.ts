@@ -6,6 +6,7 @@ import {UploadService} from "../../service/upload.service";
   templateUrl: './mini-video.component.html',
   styleUrls: ['./mini-video.component.scss']
 })
+
 export class MiniVideoComponent implements OnInit {
   @Input() thumb = "";
   @Input() min_video_profile_photo = "";
