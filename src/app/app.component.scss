@@ -32,3 +32,12 @@ fa-icon{
   background: #B5B5BE;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
+
+@media screen and (max-width: 600px) {
+  .app_layout{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
