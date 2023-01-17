@@ -10,6 +10,7 @@ import {PlaylistComponent} from "./pages/playlist/playlist.component";
 import {CanaisSugeridosComponent} from "./component/canais_sugeridos/canais-sugeridos.component";
 import {TagVideosComponent} from "./pages/tag-videos/tag-videos.component";
 import {TematicaComponent} from "./pages/tematica/tematica.component";
+import {TematicasSugeridasComponent} from "./component/tematicas-sugeridas/tematicas-sugeridas.component";
 
 const routes: Routes = [
   {path: 'video/:id', component: VideoDetailsComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'playlist/:id_playlist', component: PlaylistComponent},
   {path: 'canais_sugeridos', component: CanaisSugeridosComponent},
   {path: 'tag/:id_tag', component: TagVideosComponent},
+  {path: 'tematicas_sugeridas', component: TematicasSugeridasComponent},
 ];
 
 @NgModule({

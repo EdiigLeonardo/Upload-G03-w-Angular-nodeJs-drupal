@@ -1,6 +1,56 @@
+*{
+  box-sizing: border-box;
+}
 
+.box{
+  padding: 10px;
+  background: #1C1C24;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 10px
+}
 
 .titulo{
-
   font-weight: bold
 }
+
+.pointer{
+  cursor: pointer;
+}
+
+.showAll{
+  text-align: center;
+}
+
+.titulo{
+  font-weight: bold
+}
+.em-linha{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: center;
+}
+
+.tematica{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.img_tematicas-sug{
+  display: flex;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  vertical-align: center;
+}
+
+.nome-tematicas-sug{
+  font-weight: normal;
+  font-size: 1em;
+  vertical-align: center;
+  margin-left: 10px;
+}
+
+

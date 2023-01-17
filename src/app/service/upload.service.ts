@@ -71,6 +71,10 @@ export class UploadService {
     return this.http.get(BASE_URL + "/canais_sugeridos");
   }
 
+  getTematicasSugeridas() {
+    return this.http.get(BASE_URL + "/tematicas_sugeridas");
+  }
+
   getComentariosVideo(id: number) {
     return this.http.get(BASE_URL + "/comentarios_do_video/" + id);
   }

@@ -1,4 +1,32 @@
-<div>
-  <p class="titulo">Temáticas sugeridas</p>
-  VER TODAS
+<div class="box">
+
+  <div class="em-linha">
+    <div>
+      <p class="titulo">Temáticas sugeridas</p>
+    </div>
+    <div>
+      <p class="pointer" [routerLink]="['/canais' ]" > VER TODAS  </p>
+    </div>
+  </div>
+
+
+  <div *ngFor="let tematicas of tematicas_sugeridas">
+    <div class="tematica">
+      <div >
+        <img [src]="this.service.addUrlOfSrc(tematicas.user_picture)" class="img_tematicas-sug">
+      </div>
+      <div>
+        <div >
+          <p class="pointer">{{tematicas.title}}</p>
+          <p>{{tematicas.name}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <img [src]="field_imagem">
+    </div>
+  </div>
+
 </div>
+

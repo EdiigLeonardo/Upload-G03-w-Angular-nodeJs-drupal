@@ -1,20 +1,25 @@
-<div >
-  <p class="titulo">Canais sugeridos</p>
-</div>
 
-<div *ngFor="let canal of canais">
-
-  <div >
-    <img [src]="this.service.addUrlOfSrc(canal.user_picture)" >
-
-  </div>
+<div class="box">
   <div>
-      <h2>{{canal.title}}</h2>
+    <p class="titulo">Canais sugeridos</p>
+  </div>
+
+  <hr>
+
+  <div *ngFor="let canal of canais" class="em-linha">
+
+    <div  >
+      <img [src]="this.service.addUrlOfSrc(canal.user_picture)" class="img_canais-sug">
+
+    </div>
+    <div class="nome-canais-sug" >
+      <p class="pointer" [routerLink]="['/canal', link_do_canal ] " >{{canal.title}}</p>
+
+    </div>
 
   </div>
 
-</div>
-
-<div>
-  MOSTRAR MAIS
+  <div>
+    <p class="pointer showAll" [routerLink]="['/canais' ]" >MOSTRAR MAIS</p>
+  </div>
 </div>

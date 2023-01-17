@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {UploadService} from "../../service/upload.service";
 
@@ -11,12 +11,11 @@ import {UploadService} from "../../service/upload.service";
 export class CanaisSugeridosComponent implements OnInit {
   canais:any;
 
+  @Input() link_do_canal = "./";
 
   constructor(private route: ActivatedRoute, public service: UploadService) { }
 
   ngOnInit(): void {
-
-
 
     this.service.getCanaisSugeridos().subscribe((canais)=>{
       this.canais = canais;
