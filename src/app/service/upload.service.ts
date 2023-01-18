@@ -52,7 +52,7 @@ export class UploadService {
   }
 
   getTematica(id_tematica: number) {
-    return this.http.get(BASE_URL + "/tematica" + id_tematica)
+    return this.http.get(BASE_URL + "/tematica/" + id_tematica)
   }
 
   getPlaylists() {
@@ -78,7 +78,6 @@ export class UploadService {
   getComentariosVideo(id: number) {
     return this.http.get(BASE_URL + "/comentarios_do_video/" + id);
   }
-
 
   getComentariosCanal(id: number) {
     return this.http.get(BASE_URL + "/comentarios_do_canal/" + id);

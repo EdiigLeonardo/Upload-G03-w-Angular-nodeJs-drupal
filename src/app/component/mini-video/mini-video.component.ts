@@ -19,7 +19,7 @@ export class MiniVideoComponent implements OnInit {
   @Input() link_to_video = "";
 
 
-  constructor(private service: UploadService) {
+  constructor(public service: UploadService) {
   }
 
   ngOnInit(): void {

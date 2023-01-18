@@ -16,7 +16,6 @@ export class TematicasComponent implements OnInit {
   ngOnInit(): void {
     this.service.getTematicas().subscribe((tematica) => {
       this.tematicas = tematica;
-      console.log(this.tematicas)
     })
   }
 }
