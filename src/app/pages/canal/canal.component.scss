@@ -10,13 +10,24 @@
   .profile_infos_{
     position: relative;
     height: 100%;
+    width: 100%;
+
+    .profile_img_fade {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      height: 40%;
+      left: 0;
+      background: linear-gradient(0deg, black, transparent);
+    }
 
     .profile_info_img__{
       max-height: 292.13px;
       object-fit: cover;
       border-radius: 15px;
       object-position: 80% 25%;
-      min-width: 1206px;
+      //min-width: 1206px;
+      width: 100%;
     }
 
     .user_info_img__{

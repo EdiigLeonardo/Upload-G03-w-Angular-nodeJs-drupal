@@ -3,7 +3,7 @@
     <fa-icon [icon]="faBars" class="icon_nav" (click)=clickView()></fa-icon>
     <img class="img_-_logo_-_nav" alt="logotipo" src="assets/upload.svg">
   </div>
-  <div class="menu_layout_-_toogle" *ngIf="toogleView">
+  <div class="menu_layout_-_toogle" [ngClass]="toogleView ? '' : 'hidden'">
     <div class="menu_icons__">
     <a class="menu_icon_" routerLink="/home" routerLinkActive="active">
       <fa-icon [icon]="faHouse" class="fa_icon_menu_ icon_nav"></fa-icon>

@@ -10,14 +10,13 @@ a{
   position: relative;
   top: 0;
   left: 0;
-  width: fit-content;
+  width: 300px;
+  height: 100%;
   max-width: var(--wrapper_width_menu);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   color: var(--menu_font_color);
-  padding-bottom: 20px;
-  background-color: black;
 
   .menu_header{
     width: 100%;
@@ -32,12 +31,25 @@ a{
     align-items: center;
     border: 1px solid #292932;
 
+    @media screen and (max-width: 600px) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
     .icon_nav{
       width: 25px;
       height: 34px;
       object-fit: cover;
       color: var(--menu_font_color);
       cursor: pointer;
+      display: none;
+
+      @media screen and (max-width: 600px) {
+        display: block;
+      }
     }
 
     .img_-_logo_-_nav{
@@ -114,6 +126,16 @@ a{
   .menu_layout_-_toogle{
     border: 1px solid #292932;
     height: 100%;
+    background-color: black;
+    transition: transform 0.5s ease-in-out;
+
+    @media screen and (max-width: 600px) {
+      padding-top: 90px;
+
+      &.hidden {
+        transform: translateX(-100%);
+      }
+    }
   }
 }
 

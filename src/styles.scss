@@ -17,9 +17,13 @@
   box-sizing: border-box;
 }
 
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
 body{
   background-color: var(--bg_main);
-  width: var(--wrapper_width);
   color: var(--text_color);
   margin: 0;
   padding: 0;
