@@ -96,4 +96,7 @@ export class UploadService {
     return PANTHEON_URL + url;
   }
 
+  postComment() {
+  }
+
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {UploadService} from "../../service/upload.service";
 
@@ -10,12 +10,12 @@ import {UploadService} from "../../service/upload.service";
 export class HomeComponent implements OnInit {
   Videos: any;
 
-  constructor(private route: ActivatedRoute, public service: UploadService ) { }
+  constructor(private route: ActivatedRoute, public service: UploadService) {
+  }
 
   ngOnInit(): void {
-    this.service.getVideos().subscribe((videos)=>{
+    this.service.getVideos().subscribe((videos) => {
       this.Videos = videos;
-      console.log(this.Videos)
     })
   }
 
