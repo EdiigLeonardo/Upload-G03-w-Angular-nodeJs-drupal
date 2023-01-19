@@ -96,7 +96,19 @@ export class UploadService {
     return PANTHEON_URL + url;
   }
 
-  postComment() {
+  postComment(comment_name: string, comment_email: string, comment_id: number, comment_body: string) {
+    const data = {
+      "entity_id": [{"target_id": comment_id}],
+      "entity_type": [{"value": "media"}],
+      "comment_type": [{"target_id": "comentarios_do_video"}],
+      "field_name": [{"value": "field_comentarios"}],
+      "field_email": [{comment_email}],
+      "field_nome": [{"value": comment_name}],
+      "field_comentario": [
+        {"value": comment_body, "format": "plain_text"}
+      ]
+    }
+    return this.http.post(PANTHEON_URL + "/comment/", data)
   }
 
 }
