@@ -68,11 +68,11 @@ export class UploadService {
   }
 
   getCanaisSugeridos() {
-    return this.http.get(BASE_URL + "/canais_sugeridos");
+    return this.http.get(BASE_URL + "/canais_sugeridos?t=" + Date.now());
   }
 
   getTematicasSugeridas() {
-    return this.http.get(BASE_URL + "/tematicas_sugeridas");
+    return this.http.get(BASE_URL + "/tematicas_sugeridas?t=" + Date.now());
   }
 
   getComentariosVideo(id: number) {

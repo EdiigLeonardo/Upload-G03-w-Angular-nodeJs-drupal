@@ -18,7 +18,7 @@ export class CanaisSugeridosComponent implements OnInit {
   ngOnInit(): void {
 
     this.service.getCanaisSugeridos().subscribe((canais)=>{
-      this.canais = canais;
+      this.canais = <any[]>canais;
     })
   }
 }
