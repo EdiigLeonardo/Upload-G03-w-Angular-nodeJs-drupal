@@ -83,7 +83,7 @@ export class UploadService {
     return this.http.get(BASE_URL + "/comentarios_do_canal/" + id);
   }
 
-  editTagsFromVideo(value: string) {
+  public editTagsFromVideo(value: string) {
     const list_of_values = value.split(",")
 
     let result = list_of_values.map((value) => {
@@ -92,7 +92,7 @@ export class UploadService {
     return result.join("")
   }
 
-  addUrlOfSrc(url: string) {
+  public addUrlOfSrc(url: string) {
     return PANTHEON_URL + url;
   }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {faBarsStaggered} from "@fortawesome/free-solid-svg-icons"
 import {faHouse} from "@fortawesome/free-solid-svg-icons"
+import {faHeart} from "@fortawesome/free-solid-svg-icons"
 import {faPlay} from "@fortawesome/free-solid-svg-icons"
 import {faClapperboard} from "@fortawesome/free-solid-svg-icons"
 import {faBars} from "@fortawesome/free-solid-svg-icons";
@@ -16,6 +17,7 @@ export class MenuComponent implements OnInit {
   faPlay = faPlay;
   faClapperboard = faClapperboard;
   faBars = faBars;
+  faHeart = faHeart;
   toogleView = true;
 
   clickView(){

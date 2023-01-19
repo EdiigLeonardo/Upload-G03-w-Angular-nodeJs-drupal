@@ -27,6 +27,7 @@ import {VideoHomeBoxComponent} from './component/video-home-box/video-home-box.c
 import {TagVideosComponent} from './pages/tag-videos/tag-videos.component';
 import { TematicasBoxComponent } from './component/tematicas-box/tematicas-box.component';
 import { TematicaComponent } from './pages/tematica/tematica.component';
+import { FavoritosComponent } from './pages/favoritos/favoritos.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { TematicaComponent } from './pages/tematica/tematica.component';
     VideoHomeBoxComponent,
     TagVideosComponent,
     TematicasBoxComponent,
-    TematicaComponent
+    TematicaComponent,
+    FavoritosComponent
   ],
   imports: [
     BrowserModule,
