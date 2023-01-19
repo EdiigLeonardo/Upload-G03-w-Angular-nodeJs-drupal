@@ -9,7 +9,7 @@ import {UploadService} from "../../service/upload.service";
 })
 export class TematicaComponent implements OnInit {
 
-  tematica: any = {};
+  tematica: any;
 
   constructor(private route: ActivatedRoute, public service: UploadService) {
   }
