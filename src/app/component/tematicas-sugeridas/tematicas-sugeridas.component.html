@@ -15,7 +15,7 @@
     <div class="pointer" [routerLink]="['/tematica', tematica.nid ]" >
       <div class="tematica_sug">
         <div >
-          <img [src]="this.service.addUrlOfSrc(tematica.user_picture)" class="img_tematicas-sug">
+          <img [src]="this.service.addUrlOfSrc(tematica.user_picture)" class="img_tematicas-sug" alt="face">
         </div>
         <div>
           <div >
@@ -25,7 +25,7 @@
         </div>
       </div>
       <div>
-        <img  [src]="this.service.addUrlOfSrc(tematica.field_imagem)" >
+        <img  [src]="this.service.addUrlOfSrc(tematica.field_imagem)" alt="temática-picture" >
       </div>
     </div>
   </div>
