@@ -96,7 +96,7 @@ export class UploadService {
     return PANTHEON_URL + url;
   }
 
-  postComment(comment_name: string, comment_email: string, comment_id: number, comment_body: string) {
+  async postComment(comment_name: string, comment_email: string, comment_body: string, comment_id: number) {
     const data = {
       "entity_id": [{"target_id": comment_id}],
       "entity_type": [{"value": "media"}],
