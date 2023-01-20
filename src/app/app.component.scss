@@ -25,13 +25,26 @@
     }
 
     .app_pages_container{
-      //margin: 5px;
       flex: 1;
-      //overflow-y: overlay;
+      overflow-y: auto;
+      overflow-x: hidden;
 
       @media screen and (max-width: 600px) {
         padding-top: 80px;
       }
+    }
+
+    .app_pages_container::-webkit-scrollbar {
+      width: 0.2em;
+      background-color: #F5F5F5;
+      position: absolute;
+      right: 0;
+    }
+
+    .app_pages_container::-webkit-scrollbar-thumb ::-webkit-scrollbar-thumb {
+      background-color: #000000;
+      position: absolute;
+      left: 0;
     }
 
   }
