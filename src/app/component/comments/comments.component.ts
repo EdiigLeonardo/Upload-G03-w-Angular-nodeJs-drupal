@@ -9,12 +9,25 @@ import {UploadService} from "../../service/upload.service";
 })
 export class CommentsComponent implements OnInit {
 
-  comment_name?: string = "";
-  comment_email?: string = "";
-  comment_body?: string = "";
+  comment_name: string = "";
+  comment_email: string = "";
+  comment_body: string = "";
+  id = this.route.snapshot.params['id'];
+
+  async submitValues() {
+    try {
+      const response = await this.service.postComment(this.comment_name,this.comment_email,this.comment_body, this.id);
+      this.comment_name= "";
+      this.comment_email= "";
+      this.comment_body= "";
+      console.log("component response: ", response)
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
 
-  constructor(public service: UploadService) {
+  constructor(public service: UploadService, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {

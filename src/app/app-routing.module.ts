@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'video/:id', component: VideoDetailsComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
-  {path: 'canal/:id_canal', component: CanalComponent},
+  {path: 'canal/:id', component: CanalComponent},
   {path: 'canais', component: CanaisComponent},
   {path: 'tematicas', component: TematicasComponent},
   {path: 'tematica/:id_tematica', component: TematicaComponent},

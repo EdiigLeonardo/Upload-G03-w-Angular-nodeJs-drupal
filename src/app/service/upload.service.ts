@@ -23,24 +23,24 @@ export class UploadService {
     return this.http.get(BASE_URL + "/tag/videos/" + id_tag);
   }
 
-  getCanal(id_canal: number) {
-    return this.http.get(BASE_URL + "/canal/" + id_canal);
+  getCanal(id: number) {
+    return this.http.get(BASE_URL + "/canal/" + id);
   }
 
   getVideo(id_video: number) {
     return this.http.get(BASE_URL + "/video/" + id_video);
   }
 
-  getChannelVideos(id_canal: number) {
-    return this.http.get(BASE_URL + "/canal/videos/" + id_canal)
+  getChannelVideos(id: number) {
+    return this.http.get(BASE_URL + "/canal/videos/" + id)
   }
 
-  getCard(id_canal: number) {
-    return this.http.get(BASE_URL + "/canal/videos2/" + id_canal)
+  getCard(id: number) {
+    return this.http.get(BASE_URL + "/canal/videos2/" + id)
   }
 
-  getChannel(id_canal: number) {
-    return this.http.get(BASE_URL + "/canal/" + id_canal)
+  getChannel(id: number) {
+    return this.http.get(BASE_URL + "/canal/" + id)
   }
 
   getChannels() {
@@ -96,8 +96,31 @@ export class UploadService {
     return PANTHEON_URL + url;
   }
 
-  async postComment(comment_name: string, comment_email: string, comment_body: string, comment_id: number) {
-    const data = {
+  postComment(comment_name: string, comment_email: string, comment_body: string, comment_id: number): Promise<any> {
+    let data = {
+      "entity_id": [{"target_id": comment_id}],
+      "entity_type": [{"value": "media"}],
+      "comment_type": [{"target_id": "comentarios_do_video"}],
+      "field_name": [{"value": "field_comentarios"}],
+      "field_email": [{comment_email}],
+      "field_nome": [{"value": comment_name}],
+      "field_comentario": [
+        {"value": comment_body, "format": "plain_text"}
+      ]
+    }
+    console.table(data);
+    return this.http.post(PANTHEON_URL + "/comment", data)
+      .toPromise()
+      .then(response => response)
+      .catch(error => {
+        //console.error(error);
+        console.table(data);
+        return error;
+      });
+  }
+
+  /*postComment(comment_name: string, comment_email: string, comment_body: string, comment_id: number) {
+    let data = {
       "entity_id": [{"target_id": comment_id}],
       "entity_type": [{"value": "media"}],
       "comment_type": [{"target_id": "comentarios_do_video"}],
@@ -109,6 +132,6 @@ export class UploadService {
       ]
     }
     return this.http.post(PANTHEON_URL + "/comment/", data)
-  }
+  }*/
 
 }

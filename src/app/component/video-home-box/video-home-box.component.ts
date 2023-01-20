@@ -27,6 +27,8 @@ export class VideoHomeBoxComponent implements OnInit {
   @Input() canal = "";
   @Input() link_to_video = "";
 
+
+
   constructor() { }
 
   ngOnInit(): void {

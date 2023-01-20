@@ -40,8 +40,7 @@
       border-radius: 50%;
       position: absolute;
       bottom: -50px;
-      left: 80%;
-      right: -5%;
+      right: 20px;
     }
 
     .home_box_duration{
@@ -87,6 +86,8 @@
       background-color: transparent;
       text-align: start;
       margin-top: 10px;
+      overflow: auto;
+      max-height: 65px;
     }
 
     .home_box_footer{
@@ -105,7 +106,7 @@
         gap: 10px;
 
         .icons_video{
-          font-size: 0.9em;
+          font-size: 1em;
           width: 16px;
           height: 16px;
           background-color: transparent;
