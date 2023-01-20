@@ -13,11 +13,11 @@ export class CommentsComponent implements OnInit {
   comment_email?: string = "";
   comment_body?: string = "";
 
-  constructor(public service: UploadService) {
 
+  constructor(public service: UploadService) {
   }
 
   ngOnInit(): void {
-  }
 
+  }
 }
