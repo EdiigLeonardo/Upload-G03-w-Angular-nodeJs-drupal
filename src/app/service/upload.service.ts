@@ -15,6 +15,8 @@ export class UploadService {
   constructor(private http: HttpClient) {
   }
 
+  favorites: number[] = this.readStore();
+
   getTags() {
     return this.http.get(BASE_URL + "/tags?t=" + Date.now());
   }
@@ -134,4 +136,13 @@ export class UploadService {
     return this.http.post(PANTHEON_URL + "/comment/", data)
   }*/
 
+  readStore(){
+    // @ts-ignore
+    let store = JSON.parse(localStorage.getItem("UPBNB_Favorites"));
+    if(store !== null){
+      return store;
+    }
+    return []
+  }
+  
 }

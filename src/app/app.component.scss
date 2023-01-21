@@ -45,11 +45,15 @@
       padding: 0;
     }
 
-    .app_pages_container::-webkit-scrollbar-thumb {
+    .app_pages_container::-webkit-scrollbar-thumb:hover {
       background-color: #292932;
       border-radius: 10px;
     }
 
+    .app_pages_container::-webkit-scrollbar-thumb{
+      background-color: #1d1d23;
+      border-radius: 10px;
+    }
   }
 }
 
