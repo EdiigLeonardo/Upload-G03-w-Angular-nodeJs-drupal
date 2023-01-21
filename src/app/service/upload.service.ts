@@ -138,11 +138,11 @@ export class UploadService {
 
   readStore(){
     // @ts-ignore
-    let store = JSON.parse(localStorage.getItem("UPBNB_Favorites"));
+    let store = JSON.parse(localStorage.getItem("UPLoad_Favorites"));
     if(store !== null){
       return store;
     }
     return []
   }
-  
+
 }
