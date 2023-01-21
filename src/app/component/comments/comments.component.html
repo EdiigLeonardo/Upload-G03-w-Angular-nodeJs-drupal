@@ -6,12 +6,12 @@
     <img src="assets/dog-cry.jpg" class="img_comment_container">
     <div class="comments_-_container_-_form">
       <div class="top-form">
-        <input placeholder="Nome" class="comment_input" [(ngModel)]="comment_name">
-        <input placeholder="Email" class="comment_input" [(ngModel)]="comment_email">
+        <input placeholder="Nome" type="text" class="comment_input" [(ngModel)]="comment_name">
+        <input placeholder="Email" type="email" class="comment_input" [(ngModel)]="comment_email">
       </div>
       <textarea placeholder="mensagem" class="comment_input message" [(ngModel)]="comment_body"></textarea>
       <div class="btn_-_div">
-        <button class="comment_btn" type="button" (click)="postComment()">Submeter Comentário</button>
+        <button class="comment_btn" type="button" (click)="submitValues()">Submeter Comentário</button>
       </div>
     </div>
   </div>

@@ -124,7 +124,11 @@ a{
   }
 
   .menu_layout_-_toogle{
-    border: 1px solid #292932;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-right: 1px solid #292932;
     height: 100%;
     background-color: black;
     transition: transform 0.5s ease-in-out;
