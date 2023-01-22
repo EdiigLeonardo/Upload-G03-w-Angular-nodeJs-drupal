@@ -110,7 +110,6 @@ export class UploadService {
         {"value": comment_body, "format": "plain_text"}
       ]
     }
-    console.table(data);
     return this.http.post(PANTHEON_URL + "/comment", data)
       .toPromise()
       .then(response => response)
@@ -121,21 +120,6 @@ export class UploadService {
       });
   }
 
-  /*postComment(comment_name: string, comment_email: string, comment_body: string, comment_id: number) {
-    let data = {
-      "entity_id": [{"target_id": comment_id}],
-      "entity_type": [{"value": "media"}],
-      "comment_type": [{"target_id": "comentarios_do_video"}],
-      "field_name": [{"value": "field_comentarios"}],
-      "field_email": [{comment_email}],
-      "field_nome": [{"value": comment_name}],
-      "field_comentario": [
-        {"value": comment_body, "format": "plain_text"}
-      ]
-    }
-    return this.http.post(PANTHEON_URL + "/comment/", data)
-  }*/
-
   readStore(){
     // @ts-ignore
     let store = JSON.parse(localStorage.getItem("UPLoad_Favorites"));
@@ -143,6 +127,24 @@ export class UploadService {
       return store;
     }
     return []
+  }
+
+  toogleFavorite(id: number) {
+    if (!this.isFavorite(id)) {
+      this.favorites.push(id)
+      this.readStore()
+      localStorage.setItem("UploadStore", JSON.stringify(this.favorites))
+    } else {
+      let index = this.favorites.indexOf(id)
+      // @ts-ignore
+      this.favorites.splice(index, 1)
+      this.readStore()
+      localStorage.setItem("UploadStore", JSON.stringify(this.favorites))
+    }
+  }
+
+  isFavorite(id_casas: number): boolean {
+    return this.favorites.includes(id_casas);
   }
 
 }

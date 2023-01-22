@@ -20,7 +20,6 @@ export class CommentsComponent implements OnInit {
       this.comment_name= "";
       this.comment_email= "";
       this.comment_body= "";
-      console.log("component response: ", response)
     } catch (error) {
       console.error(error);
     }

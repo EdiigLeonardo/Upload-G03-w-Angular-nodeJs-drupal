@@ -40,17 +40,18 @@ a{
     }
 
     .icon_nav{
-      width: 25px;
-      height: 34px;
       object-fit: cover;
       color: var(--menu_font_color);
       cursor: pointer;
       display: none;
+      font-size: 30px;
+      text-align: center;
 
       @media screen and (max-width: 600px) {
         display: block;
       }
     }
+
 
     .img_-_logo_-_nav{
       width: 128px;
