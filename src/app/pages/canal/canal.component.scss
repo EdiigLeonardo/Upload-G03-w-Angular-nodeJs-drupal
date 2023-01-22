@@ -85,10 +85,59 @@
     grid-template-columns: repeat(3, calc(100% / 3));
     align-items: center;
     gap: 10px;
+
   }
 
   .menu_comentarios{
     margin-top: 10px;
   }
+
+  @media screen and (max-width: 1250px) {
+    .channel_grid_videos__{
+      display: grid;
+      margin-top: 20px;
+      align-items: center;
+      gap: 10px;
+      grid-template-columns: repeat(2, calc(100% / 2));
+    }
+  }
+
+  @media screen and (max-width: 1128px) {
+    .channel_grid_videos__{
+      display: grid;
+      margin-top: 20px;
+      align-items: center;
+      gap: 10px;
+      grid-template-columns: repeat(2, 49%);
+    }
+  }
+  @media screen and (max-width: 1028px) {
+    .channel_grid_videos__{
+      display: grid;
+      margin-top: 20px;
+      align-items: center;
+      gap: 10px;
+      grid-template-columns: repeat(2, 39%);
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .user_info_img__{
+      width: 8rem;
+      height: 8rem;
+    }
+
+    .channel_grid_videos__{
+      display: grid;
+      margin-top: 20px;
+      align-items: center;
+      gap: 10px;
+      grid-template-columns: repeat(1, 100%);
+    }
+  }
+
+
 }
+
+
 

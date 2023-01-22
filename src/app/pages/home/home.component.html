@@ -5,7 +5,7 @@
       <p>Últimos Vídeos</p>
     </div>
     <div class="all-videos-field videos_grid">
-      <app-mini-video_details
+      <app-video-home-box
         *ngFor="let item of Videos"
         [thumb]="this.service.addUrlOfSrc(item.thumbnail__target_id)"
         [data_upload]="item.field_data_upload"
@@ -13,7 +13,7 @@
         [link_to_video]="item.mid"
         [video_title]="item.name"
       >
-      </app-mini-video_details>
+      </app-video-home-box>
     </div>
   </div>
 

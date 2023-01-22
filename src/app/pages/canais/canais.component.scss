@@ -5,11 +5,21 @@
   gap: 5px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .canais_-_div_-_layout{
     padding: 0 5px;
     display: grid;
     grid-template-columns: repeat(2, calc(100% / 2));
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .canais_-_div_-_layout{
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     gap: 5px;
   }
 }
