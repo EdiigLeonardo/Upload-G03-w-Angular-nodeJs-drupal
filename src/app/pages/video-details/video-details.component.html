@@ -11,7 +11,7 @@
       <div class="video_descricao">
         <div class="details_user_time">
           <div class="nome_user" [routerLink]="['/canal', video.field_canal]">{{canal.title}}</div>
-          <div class="time">{{video.field_data_upload}}</div>
+          <div class="time">{{video.created}}</div>
         </div>
         <fa-icon [icon]="faThumbsUp" class="like"></fa-icon>
         |
