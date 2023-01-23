@@ -8,24 +8,30 @@
       <p class="pointer" [routerLink]="['/tematicas' ]" > VER TODAS  </p>
     </div>
   </div>
-  <hr>
+  <hr class="hrow">
 
 
   <div  *ngFor="let tematica of tematicas_sugeridas">
     <div class="pointer" [routerLink]="['/tematica', tematica.nid ]" >
+
       <div class="tematica_sug">
         <div >
           <img [src]="this.service.addUrlOfSrc(tematica.user_picture)" class="img_tematicas-sug" alt="face">
         </div>
+
         <div>
           <div >
-            <p class="pointer">{{tematica.title}}</p>
-            <p>{{tematica.name}}</p>
+            <p class="nome-tematicas-sug">{{tematica.title}}</p>
+            <p class="user-tematicas-sug">{{tematica.name}}</p>
           </div>
         </div>
+
       </div>
-      <div>
-        <img  [src]="this.service.addUrlOfSrc(tematica.field_imagem)" alt="temática-picture" >
+
+
+
+      <div >
+        <img [src]="this.service.addUrlOfSrc(tematica.field_imagem)" alt="temática-picture" class="cover-photo" >
       </div>
     </div>
   </div>

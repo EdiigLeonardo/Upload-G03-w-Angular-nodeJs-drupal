@@ -30,6 +30,7 @@ export class VideoHomeBoxComponent implements OnInit {
   @Input() video_src = "";
   @Input() canal = "";
   @Input() link_to_video = "";
+  @Input() created = "";
 
   toggleFavorite(){
     this.service.toogleFavorite(this.id)

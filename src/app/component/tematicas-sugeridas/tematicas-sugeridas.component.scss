@@ -1,29 +1,29 @@
 *{
   box-sizing: border-box;
 }
-
 .box{
   padding: 10px;
   background: #1C1C24;
   border-radius: 10px;
-  margin-top: 20px;
-  margin-left: 10px
-}
+  margin: 20px 0 0 10px;
 
+}
 .titulo{
   font-weight: bold
 }
-
+.hrow{
+  border-bottom: 1px solid #000000;
+}
 .pointer{
   cursor: pointer;
+  font-size: 0.9em;
 }
-
 .showAll{
   text-align: center;
 }
-
 .titulo{
-  font-weight: bold
+  font-weight: bold;
+  font-size: 0.9em;
 }
 .em-linha{
   display: flex;
@@ -31,26 +31,40 @@
   justify-content: space-between;
   vertical-align: center;
 }
-
 .tematica_sug{
   display: flex;
   flex-direction: row;
-
 }
-
 .img_tematicas-sug{
   display: flex;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   vertical-align: center;
+  margin-top: 5px;
 }
-
 .nome-tematicas-sug{
   font-weight: normal;
   font-size: 1em;
   vertical-align: center;
+  margin-top: 5px;
   margin-left: 10px;
+
+}
+.user-tematicas-sug{
+  font-weight: normal;
+  font-size: 0.9em;
+  color: #9f9f9f;
+  vertical-align: center;
+  margin-left: 10px;
+  margin-top: -5px;
+  margin-bottom: 15px;
+}
+.cover-photo{
+  border-radius: 10px;
+  width:auto;
+  height: 200px;
+
 }
 
 
