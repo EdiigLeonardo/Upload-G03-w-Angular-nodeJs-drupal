@@ -13,10 +13,12 @@
           <div class="nome_user" [routerLink]="['/canal', video.field_canal]">{{canal.title}}</div>
           <div class="time">{{video.created}}</div>
         </div>
-        <fa-icon [icon]="faThumbsUp" class="like"></fa-icon>
-        |
-        <fa-icon [icon]="faThumbsDown" class="deslike"></fa-icon>
-        <div class="descricao">{{video.field_descricao}}</div>
+        <div class="icons">
+          <fa-icon [icon]="faThumbsUp" class="like"></fa-icon>
+          |
+          <fa-icon [icon]="faThumbsDown" class="deslike"></fa-icon>
+          <div class="descricao">{{video.field_descricao}}</div>
+        </div>
       </div>
     </div>
     <app-comments></app-comments>
