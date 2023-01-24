@@ -14,19 +14,12 @@ export class CommentsComponent implements OnInit {
   comment_body: string = "";
   id = this.route.snapshot.params['id'];
 
-  async submitValues() {
-    try {
-      const response = await this.service.postComment(this.comment_name,this.comment_email,this.comment_body, this.id);
-      this.comment_name= "";
-      this.comment_email= "";
-      this.comment_body= "";
-    } catch (error) {
-      console.error(error);
-    }
+  public submitValuesVideo() {
+    this.service.postComment(this.comment_name, this.comment_email, this.comment_body, this.id);
+    console.log(this.comment_name, this.comment_email, this.comment_body, this.id)
   }
 
-
-  constructor(public service: UploadService, private route: ActivatedRoute) {
+  constructor(public service: UploadService, public route: ActivatedRoute) {
   }
 
   ngOnInit(): void {

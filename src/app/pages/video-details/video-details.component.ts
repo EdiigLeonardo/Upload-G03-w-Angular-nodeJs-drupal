@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {faThumbsUp} from "@fortawesome/free-solid-svg-icons";
 import {faThumbsDown} from "@fortawesome/free-solid-svg-icons";
+import {faFlag} from "@fortawesome/free-solid-svg-icons";
 import {UploadService} from "../../service/upload.service";
 import {ActivatedRoute} from "@angular/router";
 import {DomSanitizer} from "@angular/platform-browser";
@@ -11,6 +12,7 @@ import {DomSanitizer} from "@angular/platform-browser";
   styleUrls: ['./video-details.component.scss']
 })
 export class VideoDetailsComponent implements OnInit {
+  faFlag = faFlag;
   faThumbsUp = faThumbsUp;
   faThumbsDown = faThumbsDown;
   video: any = {};

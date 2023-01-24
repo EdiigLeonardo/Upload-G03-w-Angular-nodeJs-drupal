@@ -18,10 +18,11 @@
   }
 
   .video {
-    width: 934px;
     height: 523px;
-    left: 281px;
-    top: 110px;
+    border-radius: 20px;
+    //width: 934px;
+    //left: 281px;
+    //top: 110px;
   }
 
   h5 {
@@ -29,6 +30,7 @@
   }
 
   .video_details {
+    padding: 20px;
     display: flex;
     gap: 8px;
 
@@ -46,6 +48,11 @@
 
       .like {
         width: 25px;
+      }
+
+      .report {
+        width: 25px;
+        background: #92929D;
       }
 
       .deslike {
@@ -72,6 +79,7 @@
       }
 
       .descricao {
+        margin-top: 20px;
         text-align: justify;
         width: auto;
         padding: 10px;

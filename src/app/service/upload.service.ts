@@ -98,32 +98,40 @@ export class UploadService {
     return PANTHEON_URL + url;
   }
 
-  postComment(comment_name: string, comment_email: string, comment_body: string, comment_id: number): Promise<any> {
+  postComment(comment_name: string, comment_email: string, comment_body: string, id: number) {
     let data = {
-      "entity_id": [{"target_id": comment_id}],
-      "entity_type": [{"value": "media"}],
-      "comment_type": [{"target_id": "comentarios_do_video"}],
-      "field_name": [{"value": "field_comentarios"}],
-      "field_email": [{comment_email}],
-      "field_nome": [{"value": comment_name}],
-      "field_comentario": [
-        {"value": comment_body, "format": "plain_text"}
-      ]
+      entity_id: [{target_id: id}],
+      entity_type: [{value: "media"}],
+      comment_type: [{target_id: "comentarios_do_video"}],
+      field_name: [{value: "field_comentarios"}],
+      field_email: [{value: comment_email}],
+      field_nome: [{value: comment_name}],
+      field_comentario: [{value: comment_body, format: "plain_text"}]
     }
-    return this.http.post(PANTHEON_URL + "/comment", data)
-      .toPromise()
-      .then(response => response)
-      .catch(error => {
-        //console.error(error);
-        console.table(data);
-        return error;
-      });
+
+    this.http.post(PANTHEON_URL + "comment", data).subscribe(() => {
+    });
   }
 
-  readStore(){
+  postCommentCanal(comment_name: string, comment_email: string, comment_body: string, id: number) {
+    let data = {
+      entity_id: [{target_id: id}],
+      entity_type: [{value: "node"}],
+      comment_type: [{target_id: "comentarios_do_canal"}],
+      field_name: [{value: "field_comentarios"}],
+      field_email: [{value: comment_email}],
+      field_nome: [{value: comment_name}],
+      field_comentario: [{value: comment_body, format: "plain_text"}]
+    }
+
+    this.http.post(PANTHEON_URL + "comment", data).subscribe(() => {
+    });
+  }
+
+  readStore() {
     // @ts-ignore
     let store = JSON.parse(localStorage.getItem("UPLoad_Favorites"));
-    if(store !== null){
+    if (store !== null) {
       return store;
     }
     return []
