@@ -10,6 +10,7 @@
   width: 100%;
   display: flex;
 
+
   .corpo {
     position: center;
     display: flex;
@@ -26,7 +27,9 @@
   }
 
   h5 {
-    color: #4783ee;
+    font-family: Roboto;
+    color: #1E75FF;
+
   }
 
   .video_details {
@@ -46,6 +49,7 @@
       display: flex;
       width: 100%;
       flex-direction: column;
+
       .like {
         width: 25px;
       }
