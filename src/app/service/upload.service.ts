@@ -15,7 +15,22 @@ export class UploadService {
   constructor(private http: HttpClient) {
   }
 
-  favorites: number[] = this.readStore();
+  readStore() {
+    // @ts-ignore
+    let store: string[] = localStorage.getItem("UploadStore");
+    if(store !== null){
+      //@ts-ignore
+      const STORE_2 = store.split(",");
+      STORE_2.forEach((value: any, index: number)=>{
+        value = parseInt(value);
+        STORE_2[index] = value;
+      })
+      return STORE_2;
+    }
+    return []
+  }
+
+  favorites: any[] = this.readStore();
 
   getTags() {
     return this.http.get(BASE_URL + "/tags?t=" + Date.now());
@@ -128,27 +143,21 @@ export class UploadService {
     });
   }
 
-  readStore() {
-    // @ts-ignore
-    let store = JSON.parse(localStorage.getItem("UPLoadStore"));
-    if(store !== null){
-      console.log("I'm reading", store);
-      return store;
-    }
-    return []
-  }
+
 
   toogleFavorite(id: number) {
     if (!this.isFavorite(id)) {
       this.favorites.push(id)
       this.readStore()
-      localStorage.setItem("UploadStore", JSON.stringify(this.favorites))
+      // @ts-ignore
+      localStorage.setItem("UploadStore", this.favorites)
     } else {
       let index = this.favorites.indexOf(id)
       // @ts-ignore
       this.favorites.splice(index, 1)
       this.readStore()
-      localStorage.setItem("UploadStore", JSON.stringify(this.favorites))
+      // @ts-ignore
+      localStorage.setItem("UploadStore", this.favorites)
     }
   }
 
