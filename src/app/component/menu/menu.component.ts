@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit {
   faClapperboard = faClapperboard;
   faBars = faBars;
   faHeart = faHeart;
-  toogleView = true;
+  toogleView = false;
 
   clickView(){
     this.toogleView = !this.toogleView

@@ -42,12 +42,10 @@
       border: 6px solid #FFFFFF;
       display: flex;
 
-      @media screen and (max-width: 250px) {
-        .img_canal_-_foto_-_de_-_perfil{
-          width: 100px;
-          height: 100px;
+      @media screen and (max-width: 270px) {
+          width: calc(200px - 15vw);
+          height: calc(200px - 15vw);
           border-radius: 50%;
-        }
       }
     }
   }
