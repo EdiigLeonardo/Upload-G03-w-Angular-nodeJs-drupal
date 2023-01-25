@@ -13,7 +13,7 @@ import {UploadService} from "../../service/upload.service";
   styleUrls: ['./video-home-box.component.scss']
 })
 export class VideoHomeBoxComponent implements OnInit {
-  id = this.route.snapshot.params['id'];
+  //id = this.route.snapshot.params['id'];
 
   faThumbsUp = faThumbsUp;
   faThumbsDown = faThumbsDown;
@@ -31,13 +31,16 @@ export class VideoHomeBoxComponent implements OnInit {
   @Input() canal = "";
   @Input() link_to_video = "";
   @Input() created = "";
+  @Input() id = "";
 
   toggleFavorite(){
-    this.service.toogleFavorite(this.id)
+    let mid = parseInt(this.id);
+    this.service.toogleFavorite(mid);
   }
 
   get favorite(){
-    return this.service.isFavorite(this.id);
+    let mid = parseInt(this.id);
+    return this.service.isFavorite(mid);
   }
 
 

@@ -122,7 +122,7 @@ export class UploadService {
 
   readStore(){
     // @ts-ignore
-    let store = JSON.parse(localStorage.getItem("UPLoad_Favorites"));
+    let store = JSON.parse(localStorage.getItem("UPLoadStore"));
     if(store !== null){
       return store;
     }
@@ -143,8 +143,8 @@ export class UploadService {
     }
   }
 
-  isFavorite(id_casas: number): boolean {
-    return this.favorites.includes(id_casas);
+  isFavorite(id: number): boolean {
+    return this.favorites.includes(id);
   }
 
 }

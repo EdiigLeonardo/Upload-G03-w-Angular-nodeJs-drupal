@@ -10,14 +10,16 @@
            [routerLink]="['/canal', video.field_canal]">
       <div class="video_descricao">
         <div class="details_user_time">
-          <div class="nome_user" [routerLink]="['/canal', video.field_canal]">{{canal.title}}</div>
-          <div class="time">{{video.created}}</div>
+          <p class="nome_user" [routerLink]="['/canal', video.field_canal]">{{canal.title}}</p>
+          <div class="time">{{video.field_data_upload}}</div>
         </div>
-        <div class="icons">
+        <div class="video_descricao_icons">
           <fa-icon [icon]="faThumbsUp" class="like"></fa-icon>
           |
           <fa-icon [icon]="faThumbsDown" class="deslike"></fa-icon>
-          <div class="descricao">{{video.field_descricao}}</div>
+        </div>
+        <div>
+          <p class="descricao">{{video.field_descricao}}</p>
         </div>
       </div>
     </div>

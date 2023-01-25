@@ -15,13 +15,12 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
+    width: 100%;
   }
 
   .video {
-    width: 934px;
+    width: 100%;
     height: 523px;
-    left: 281px;
-    top: 110px;
   }
 
   h5 {
@@ -30,7 +29,7 @@
 
   .video_details {
     display: flex;
-    gap: 8px;
+    gap: 6px;
 
     .img_user {
       object-fit: cover;
@@ -40,10 +39,10 @@
     }
 
     .video_descricao {
+      margin-top: 10px;
       display: flex;
+      width: 100%;
       flex-direction: column;
-
-
       .like {
         width: 25px;
       }
@@ -73,9 +72,8 @@
 
       .descricao {
         text-align: justify;
-        width: auto;
+        width: 100%;
         padding: 10px;
-        top: 750px;
         background: #1C1C24;
         border-radius: 10px;
       }
