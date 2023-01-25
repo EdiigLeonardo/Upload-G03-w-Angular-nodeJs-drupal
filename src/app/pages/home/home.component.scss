@@ -25,8 +25,11 @@
       margin-top: 20px;
       grid-template-columns: repeat(2, 0.5fr);
       align-items: center;
-      gap: 10px;
+      gap: 10px
 
+      ;@media screen and (max-width: 750px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
 
     .right-bar{
@@ -35,6 +38,9 @@
       margin: 0 10px;
       width: 300px;
 
+      @media screen and (max-width: 1000px) {
+      display: none;
+      }
     }
   }
 

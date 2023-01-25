@@ -2,6 +2,7 @@
   <div class="corpo">
     <h2>{{video.name}}</h2>
     <h5>#{{video.field_tags}}</h5>
+    <fa-icon [icon]="faFlag" class="report"></fa-icon>
     <iframe class="video"
             [src]="video.field_media_oembed_video">
     </iframe>
@@ -18,9 +19,7 @@
           |
           <fa-icon [icon]="faThumbsDown" class="deslike"></fa-icon>
         </div>
-        <div>
-          <p class="descricao">{{video.field_descricao}}</p>
-        </div>
+        <div class="descricao">{{video.field_descricao}}</div>
       </div>
     </div>
     <app-comments></app-comments>

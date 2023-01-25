@@ -28,6 +28,7 @@ import {TagVideosComponent} from './pages/tag-videos/tag-videos.component';
 import { TematicasBoxComponent } from './component/tematicas-box/tematicas-box.component';
 import { TematicaComponent } from './pages/tematica/tematica.component';
 import { FavoritosComponent } from './pages/favoritos/favoritos.component';
+import { PostCommentCanalComponent } from './component/post-comment-canal/post-comment-canal.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { FavoritosComponent } from './pages/favoritos/favoritos.component';
     TagVideosComponent,
     TematicasBoxComponent,
     TematicaComponent,
-    FavoritosComponent
+    FavoritosComponent,
+    PostCommentCanalComponent
   ],
   imports: [
     BrowserModule,
