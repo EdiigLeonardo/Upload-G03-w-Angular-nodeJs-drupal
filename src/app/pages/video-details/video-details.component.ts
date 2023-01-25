@@ -19,7 +19,6 @@ export class VideoDetailsComponent implements OnInit {
   canal: any = {};
   comment: any = {};
 
-
   videos: any = {};
   pronto: boolean = false;
 
@@ -54,4 +53,7 @@ export class VideoDetailsComponent implements OnInit {
     });
   }
 
+  addComment(comment: any) {
+    this.comment.unshift(comment)
+  }
 }
