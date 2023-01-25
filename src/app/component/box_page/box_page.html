@@ -1,7 +1,7 @@
 <div class="canal_box_-_layout">
   <div class="canal_box_-_header">
     <img [src]="img_de_capa" class="img_canal_-_foto_-_de_-_capa">
-    <img [src]="img_de_perfil" class="img_canal_-_foto_-_de_-_perfil">
+    <img [src]="img_de_perfil" class="img_canal_-_foto_-_de_-_perfil" *ngIf="img_de_perfil">
   </div>
   <div class="canal_box_-_footer">
     <p class="canal_box_-_canal_-_nome">{{nome}}</p>

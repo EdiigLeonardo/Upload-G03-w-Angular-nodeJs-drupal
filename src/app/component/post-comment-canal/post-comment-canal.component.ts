@@ -14,9 +14,8 @@ export class PostCommentCanalComponent implements OnInit {
   comment_body: string = "";
   id = this.route.snapshot.params['id'];
 
-  public submitValuesCanal() {
-    this.service.postCommentCanal(this.comment_name, this.comment_email, this.comment_body, this.id);
-    console.log(this.comment_name, this.comment_email, this.comment_body, this.id)
+  async submitValuesCanal() {
+    await this.service.postCommentCanal(this.comment_name, this.comment_email, this.comment_body, this.id);
   }
 
   constructor(public service: UploadService, public route: ActivatedRoute) {
