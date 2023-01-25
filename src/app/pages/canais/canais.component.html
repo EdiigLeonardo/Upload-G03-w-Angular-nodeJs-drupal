@@ -1,7 +1,8 @@
 <div class="canais_-_div_-_layout">
-  <app-canal-box *ngFor="let canal of channel"
-  [img_de_capa]="this.service.addUrlOfSrc(canal.field_media_image)"
-  [img_de_perfil]="this.service.addUrlOfSrc(canal.user_picture)"
-  [nome_do_canal]="canal.title"
-  [link_do_canal]="canal.nid"></app-canal-box>
+  <app-box_page *ngFor="let canal of channel"
+                [img_de_capa]="this.service.addUrlOfSrc(canal.field_media_image)"
+                [img_de_perfil]="this.service.addUrlOfSrc(canal.user_picture)"
+                [nome]="canal.title"
+                [link]="canal.nid"
+                [router_da_pagina]="'/canal'"></app-box_page>
 </div>

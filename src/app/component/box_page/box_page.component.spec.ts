@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { CanalBoxComponent } from './canal-box.component';
+import {CanalBoxComponent} from './box_page.component';
 
 describe('CanalBoxComponent', () => {
   let component: CanalBoxComponent;
@@ -8,9 +8,9 @@ describe('CanalBoxComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CanalBoxComponent ]
+      declarations: [CanalBoxComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(CanalBoxComponent);
     component = fixture.componentInstance;

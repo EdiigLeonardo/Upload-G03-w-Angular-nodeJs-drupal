@@ -20,11 +20,9 @@ import {TematicasComponent} from './pages/tematicas/tematicas.component';
 import {CanalComponent} from './pages/canal/canal.component';
 import {CanaisComponent} from './pages/canais/canais.component';
 import {TematicasSugeridasComponent} from './component/tematicas-sugeridas/tematicas-sugeridas.component';
-import {CanalBoxComponent} from './component/canal-box/canal-box.component';
-import {PlaylistBoxComponent} from './component/playlist-box/playlist-box.component';
+import {CanalBoxComponent} from './component/box_page/box_page.component';
 import {VideoHomeBoxComponent} from './component/video-home-box/video-home-box.component';
 import {TagVideosComponent} from './pages/tag-videos/tag-videos.component';
-import {TematicasBoxComponent} from './component/tematicas-box/tematicas-box.component';
 import {TematicaComponent} from './pages/tematica/tematica.component';
 import {FavoritosComponent} from './pages/favoritos/favoritos.component';
 import {PostCommentCanalComponent} from './component/post-comment-canal/post-comment-canal.component';
@@ -49,10 +47,8 @@ import {PostCommentCanalComponent} from './component/post-comment-canal/post-com
     CanaisComponent,
     TematicasSugeridasComponent,
     CanalBoxComponent,
-    PlaylistBoxComponent,
     VideoHomeBoxComponent,
     TagVideosComponent,
-    TematicasBoxComponent,
     TematicaComponent,
     FavoritosComponent,
     PostCommentCanalComponent
