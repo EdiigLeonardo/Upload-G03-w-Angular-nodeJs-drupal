@@ -1,7 +1,9 @@
 <div class="video_container" *ngIf="pronto">
   <div class="corpo">
-    <h2>{{video.name}}</h2>
-    <h5>#{{video.field_tags}}</h5>
+    <div class="titulo">
+      <h2>{{video.name}}</h2>
+      <h5>#{{video.field_tags}}</h5>
+    </div>
     <fa-icon [icon]="faFlag" class="report"></fa-icon>
     <iframe class="video"
             [src]="video.field_media_oembed_video">
