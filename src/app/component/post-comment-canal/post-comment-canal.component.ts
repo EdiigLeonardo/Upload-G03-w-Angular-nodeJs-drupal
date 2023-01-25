@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {UploadService} from "../../service/upload.service";
 import {ActivatedRoute} from "@angular/router";
 
@@ -13,10 +13,12 @@ export class PostCommentCanalComponent implements OnInit {
   comment_email: string = "";
   comment_body: string = "";
   id = this.route.snapshot.params['id'];
+  @Output() post = new EventEmitter<any>();
 
   public submitValuesCanal() {
     this.service.postCommentCanal(this.comment_name, this.comment_email, this.comment_body, this.id);
-    console.log(this.comment_name, this.comment_email, this.comment_body, this.id)
+    this.post.emit({field_nome: this.comment_name, field_comentario: this.comment_body});
+    this.comment_name = "", this.comment_email = "", this.comment_body = "";
   }
 
   constructor(public service: UploadService, public route: ActivatedRoute) {

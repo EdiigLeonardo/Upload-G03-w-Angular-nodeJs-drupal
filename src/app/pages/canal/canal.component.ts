@@ -31,4 +31,9 @@ export class CanalComponent implements OnInit {
       console.log(this.comment)
     })
   }
+
+  addComment(comment: any) {
+    this.comment.unshift(comment)
+  }
+
 }

@@ -25,7 +25,7 @@
       </app-mini-video_details>
     </div>
     <div class="menu_comentarios">
-      <app-post-comment-canal></app-post-comment-canal>
+      <app-post-comment-canal (post)="addComment($event)"></app-post-comment-canal>
     </div>
     <app-comment *ngFor="let c of comment"
                  [name]="c.field_nome"

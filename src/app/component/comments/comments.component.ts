@@ -18,7 +18,7 @@ export class CommentsComponent implements OnInit {
 
   public submitValuesVideo() {
     this.service.postComment(this.comment_name, this.comment_email, this.comment_body, this.id);
-    this.post.emit({field_nome: this.comment_name, field_comentario: this.comment_body, created: new Date()});
+    this.post.emit({field_nome: this.comment_name, field_comentario: this.comment_body});
     this.comment_name = "", this.comment_email = "", this.comment_body = "";
   }
 
