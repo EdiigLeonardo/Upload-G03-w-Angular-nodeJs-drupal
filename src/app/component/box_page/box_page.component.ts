@@ -10,6 +10,7 @@ export class CanalBoxComponent implements OnInit {
   @Input() img_de_perfil = "";
   @Input() nome = "";
   @Input() link = "";
+  @Input() botao = "";
   @Input() router_da_pagina = "";
 
   constructor() {

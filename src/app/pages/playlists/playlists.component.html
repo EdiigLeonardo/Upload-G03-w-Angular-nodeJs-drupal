@@ -2,5 +2,7 @@
   <app-box_page *ngFor="let p of playlists"
                 [img_de_capa]="this.service.addUrlOfSrc(p.field_imagem)"
                 [nome]="p.title"
+                [botao]="'Ver Playlist'"
+                [router_da_pagina]="'/playlist'"
                 [link]="p.nid"></app-box_page>
 </div>
