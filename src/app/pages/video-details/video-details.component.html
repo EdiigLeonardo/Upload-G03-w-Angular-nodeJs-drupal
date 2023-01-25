@@ -24,7 +24,9 @@
       </div>
     </div>
     <div class="descricao">{{video.field_descricao}}</div>
-    <app-comments></app-comments>
+
+    <app-comments (post)="addComment($event)"></app-comments>
+
     <app-comment *ngFor="let c of comment"
                  [name]="c.field_nome"
                  [comment]="c.field_comentario"
