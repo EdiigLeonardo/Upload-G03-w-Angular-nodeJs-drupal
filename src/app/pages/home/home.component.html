@@ -8,7 +8,6 @@
       <app-video-home-box
         *ngFor="let item of Videos"
         [thumb]="this.service.addUrlOfSrc(item.thumbnail__target_id)"
-        [min_video_profile_photo] = "this.service.addUrlOfSrc(item.thumbnail__target_id)"
         [data_upload]="item.field_data_upload"
         [video_duration]="item.field_duracao"
         [link_to_video]="item.mid"

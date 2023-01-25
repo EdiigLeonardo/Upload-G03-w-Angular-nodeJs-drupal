@@ -85,7 +85,7 @@ export class UploadService {
     return this.http.get(BASE_URL + "/comentarios_do_canal/" + id);
   }
 
-  public editTagsFromVideo(value: string) {
+  editTagsFromVideo(value: string) {
     const list_of_values = value.split(",")
 
     let result = list_of_values.map((value) => {
@@ -132,6 +132,7 @@ export class UploadService {
     // @ts-ignore
     let store = JSON.parse(localStorage.getItem("UPLoadStore"));
     if(store !== null){
+      console.log("I'm reading", store);
       return store;
     }
     return []
@@ -152,6 +153,7 @@ export class UploadService {
   }
 
   isFavorite(id: number): boolean {
+    //console.log("isFavorite: ", this.favorites.includes(id), id, this.favorites)
     return this.favorites.includes(id);
   }
 
