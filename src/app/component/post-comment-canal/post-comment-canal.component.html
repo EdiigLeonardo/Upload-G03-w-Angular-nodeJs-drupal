@@ -1,0 +1,21 @@
+<div class="container__comments">
+  <div class="header_-_comments">
+    <span class="comments_-_header_-_span">Comments</span>
+  </div>
+  <div class="comments_form_with_pic">
+    <img src="assets/dog-cry.jpg" class="img_comment_container">
+    <div class="comments_-_container_-_form">
+      <div class="top-form">
+        <input placeholder="Nome" type="text" class="comment_input" [(ngModel)]="comment_name">
+        <input placeholder="Email" type="email" class="comment_input" [(ngModel)]="comment_email">
+      </div>
+      <textarea placeholder="mensagem" class="comment_input message" [(ngModel)]="comment_body"></textarea>
+      <div class="btn_-_div">
+
+        <button class="comment_btn" type="button" (click)="submitValuesCanal()">Submeter Comentário</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
