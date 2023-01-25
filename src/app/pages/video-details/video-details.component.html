@@ -12,16 +12,16 @@
       <div class="video_descricao">
         <div class="details_user_time">
           <p class="nome_user" [routerLink]="['/canal', video.field_canal]">{{canal.title}}</p>
-          <div class="time">{{video.field_data_upload}}</div>
+          <div class="time">{{video.created}}</div>
         </div>
-        <div class="video_descricao_icons">
+        <div class="icons">
           <fa-icon [icon]="faThumbsUp" class="like"></fa-icon>
           |
           <fa-icon [icon]="faThumbsDown" class="deslike"></fa-icon>
         </div>
-        <div class="descricao">{{video.field_descricao}}</div>
       </div>
     </div>
+    <div class="descricao">{{video.field_descricao}}</div>
     <app-comments></app-comments>
     <app-comment *ngFor="let c of comment"
                  [name]="c.field_nome"
@@ -33,7 +33,7 @@
     <app-mini-video_details *ngFor="let v of videos" class="unico"
                             [video_title]="v.name"
                             [canal]="v.field_canal"
-                            [data_upload]="v.field_data_upload"
+                            [data_upload]="v.created"
                             [thumb]="this.service.addUrlOfSrc(v.thumbnail__target_id)"
                             [link_to_video]="v.mid">
     </app-mini-video_details>
