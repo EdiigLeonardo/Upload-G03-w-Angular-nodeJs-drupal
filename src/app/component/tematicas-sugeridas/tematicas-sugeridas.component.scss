@@ -11,9 +11,7 @@
 .titulo{
   font-weight: bold
 }
-.hrow{
-  border-bottom: 1px solid #000000;
-}
+
 .pointer{
   cursor: pointer;
   font-size: 0.9em;
@@ -30,6 +28,9 @@
   flex-direction: row;
   justify-content: space-between;
   vertical-align: center;
+  border-bottom: 2px solid #3c3c49;
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
 }
 .tematica_sug{
   display: flex;
@@ -62,8 +63,8 @@
 }
 .cover-photo{
   border-radius: 10px;
-  width:auto;
-  height: 200px;
+  width:230px;
+
 
 }
 

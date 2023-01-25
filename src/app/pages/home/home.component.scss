@@ -35,8 +35,8 @@
     .right-bar{
       height: fit-content;
       flex-direction: column;
-      margin: 0 10px;
-      width: 300px;
+      margin: 1em 0 1em 1em;
+      width: 270px;
 
       @media screen and (max-width: 1000px) {
       display: none;
