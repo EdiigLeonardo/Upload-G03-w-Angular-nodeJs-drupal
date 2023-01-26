@@ -17,9 +17,9 @@
           <div class="time">{{video.created}}</div>
         </div>
         <div class="icons">
-          <fa-icon [icon]="faThumbsUp" class="like"></fa-icon>
+          <fa-icon [icon]="isLiked ? faThumbsUpSolid : faThumbsUp" class="like"></fa-icon>
           |
-          <fa-icon [icon]="faThumbsDown" class="deslike"></fa-icon>
+          <fa-icon [icon]="isDisLiked? faThumbsDownSolid : faThumbsDown" class="deslike"></fa-icon>
         </div>
       </div>
     </div>

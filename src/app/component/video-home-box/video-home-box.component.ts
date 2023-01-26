@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {faBookmark} from "@fortawesome/free-regular-svg-icons";
 import {faThumbsUp} from "@fortawesome/free-regular-svg-icons";
 import {faThumbsDown} from "@fortawesome/free-regular-svg-icons";
+import {faComment} from "@fortawesome/free-regular-svg-icons";
 import {faShareNodes} from "@fortawesome/free-solid-svg-icons";
 import {faBookmark as faBookmarkSolid} from "@fortawesome/free-solid-svg-icons";
 import {ActivatedRoute} from "@angular/router";
@@ -20,6 +21,7 @@ export class VideoHomeBoxComponent implements OnInit {
   faBookmark = faBookmark;
   faBookmarkSolid = faBookmarkSolid;
   faShareNodes = faShareNodes;
+  faComment = faComment;
 
   @Input() thumb = "";
   @Input() min_video_profile_photo = "";

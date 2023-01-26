@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {faThumbsUp} from "@fortawesome/free-solid-svg-icons";
-import {faThumbsDown} from "@fortawesome/free-solid-svg-icons";
+import {faThumbsUp as faThumbsUpSolid} from "@fortawesome/free-solid-svg-icons";
+import {faThumbsDown as faThumbsDownSolid} from "@fortawesome/free-solid-svg-icons";
+import {faThumbsUp} from "@fortawesome/free-regular-svg-icons";
+import {faThumbsDown} from "@fortawesome/free-regular-svg-icons";
 import {faFlag} from "@fortawesome/free-solid-svg-icons";
 import {UploadService} from "../../service/upload.service";
 import {ActivatedRoute} from "@angular/router";
@@ -15,12 +17,15 @@ export class VideoDetailsComponent implements OnInit {
   faFlag = faFlag;
   faThumbsUp = faThumbsUp;
   faThumbsDown = faThumbsDown;
+  faThumbsUpSolid = faThumbsUpSolid;
+  faThumbsDownSolid = faThumbsDownSolid;
   video: any = {};
   canal: any = {};
   comment: any = {};
-
   videos: any = {};
   pronto: boolean = false;
+  isLiked: boolean = false;
+  isDisLiked: boolean = false;
 
   constructor(private route: ActivatedRoute, public service: UploadService, private sanitizer: DomSanitizer) {
   }

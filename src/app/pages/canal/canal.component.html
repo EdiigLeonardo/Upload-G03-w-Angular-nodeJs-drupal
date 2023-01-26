@@ -14,15 +14,17 @@
       </div>
     </div>
     <div class="channel_grid_videos__">
-      <app-mini-video_details *ngFor="let item of channelVideos"
-                              [thumb]="this.service.addUrlOfSrc(item.thumbnail__target_id)"
-                              [data_upload]="item.created"
-                              [video_title]="item.name"
-                              [video_duration]="item.field_duracao"
-                              [tags]="this.service.editTagsFromVideo(item.field_tags)"
-                              [link_to_video]="item.mid"
+      <app-video-home-box
+        *ngFor="let item of channelVideos"
+        [thumb]="this.service.addUrlOfSrc(item.thumbnail__target_id)"
+        [data_upload]="item.field_data_upload"
+        [video_duration]="item.field_duracao"
+        [link_to_video]="item.mid"
+        [video_title]="item.name"
+        [created]="item.created"
+        [id] = "item.mid"
       >
-      </app-mini-video_details>
+      </app-video-home-box>
     </div>
     <div class="menu_comentarios">
       <app-post-comment-canal (post)="addComment($event)"></app-post-comment-canal>

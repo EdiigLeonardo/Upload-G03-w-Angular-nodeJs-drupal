@@ -1,5 +1,12 @@
-.tematicas-box {
+.tematicas-grid_layout {
   padding: 0 5px;
   display: grid;
-  grid-template-columns: repeat(3, 0.5fr);
+  width: 100%;
+  grid-template-columns: repeat(3, calc(100% / 3));
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(2, calc(100% / 2));
+  }
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 100%;
+  }
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {UploadService} from "../../service/upload.service";
 
 @Component({
   selector: 'app-favoritos',
@@ -6,10 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./favoritos.component.scss']
 })
 export class FavoritosComponent implements OnInit {
+  videos: any;
+  favoriteVideos: [] = [];
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, public service: UploadService) { }
 
   ngOnInit(): void {
+    this.service.getAllVideos().subscribe((videos) => {
+      this.videos = videos;
+      this.videos.forEach((value: object, i: number)=>{
+        // @ts-ignore
+        if(this.service.isFavorite(parseInt(value.mid))){
+          // @ts-ignore
+          this.favoriteVideos.push(value);
+          this.videos = this.favoriteVideos;
+        }
+      })
+      //console.table(this.videos);
+    })
   }
+
+
 
 }

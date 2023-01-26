@@ -1,7 +1,7 @@
-<div class="tematicas-box">
+<div class="tematicas-grid_layout">
   <app-box_page *ngFor="let p of tematicas"
                 [img_de_capa]="this.service.addUrlOfSrc(p.field_imagem)"
                 [nome]="p.title"
                 [router_da_pagina]="'/tematica'"
-                [nome_da_pagina]="'Tematicas'"></app-box_page>
+                [botao]="'Ver Tematica'"></app-box_page>
 </div>

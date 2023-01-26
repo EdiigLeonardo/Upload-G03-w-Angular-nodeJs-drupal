@@ -1,1 +1,17 @@
-<app-video-home-box></app-video-home-box>
+<div class="favoritos_layout_container">
+  <h3 class="favoritos_title_">Os Seus Favoritos</h3>
+  <div class="favoritos_grid_container" *ngIf="this.videos">
+    <app-video-home-box
+      *ngFor="let item of videos"
+      [thumb]="this.service.addUrlOfSrc(item.thumbnail__target_id)"
+      [data_upload]="item.field_data_upload"
+      [video_duration]="item.field_duracao"
+      [link_to_video]="item.mid"
+      [video_title]="item.name"
+      [created]="item.created"
+      [id] = "item.mid"
+    >
+    </app-video-home-box>
+  </div>
+</div>
+

@@ -39,6 +39,7 @@
   border-radius: 50%;
   vertical-align: center;
   margin-top: 5px;
+  object-fit: cover;
 
 }
 .nome-canais-sug{
@@ -46,8 +47,8 @@
   font-weight: normal;
   font-size: 0.9em;
   padding-bottom: 5px;
-
   margin-left: 10px;
+  color: #92929D;
 }
 .showAll{
   height: 50px;
@@ -55,7 +56,6 @@
   font-size: 0.9em;
   text-align: center;
   padding-top: 15px;
-
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }

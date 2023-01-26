@@ -84,6 +84,10 @@ export class UploadService {
     return this.http.get(BASE_URL + "/video");
   }
 
+  getAllVideos(){
+    return this.http.get(BASE_URL + "/video2");
+  }
+
   getCanaisSugeridos() {
     return this.http.get(BASE_URL + "/canais_sugeridos?t=" + Date.now());
   }
@@ -162,8 +166,8 @@ export class UploadService {
   }
 
   isFavorite(id: number): boolean {
-    //console.log("isFavorite: ", this.favorites.includes(id), id, this.favorites)
     return this.favorites.includes(id);
   }
+
 
 }

@@ -1,8 +1,19 @@
 .tematica {
-  padding: 0 5px;
   display: grid;
   grid-template-columns: repeat(3, 0.5fr);
   gap: 5px;
   width: 100%;
   margin-top: 10px;
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(2, calc(100% / 2));
+  }
+
+  @media screen and (max-width: 1156px) {
+    grid-template-columns: repeat(2, calc(100% / 2));
+  }
+  @media screen and (max-width: 950px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
