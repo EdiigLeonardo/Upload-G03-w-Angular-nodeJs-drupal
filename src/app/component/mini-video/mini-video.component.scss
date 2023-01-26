@@ -28,9 +28,11 @@
   .mini_video_profile_img {
     position: absolute;
     object-fit: cover;
-    right: 48px;
-    top: 190px;
-    border: 6px solid #ececec;
+    right: 18px;
+    bottom: -1.4rem;
+    border: 1px solid rgba(250, 250, 250, 0.35);
+    height: 56px;
+    width: 56px;
     border-radius: 50%;
   }
 
