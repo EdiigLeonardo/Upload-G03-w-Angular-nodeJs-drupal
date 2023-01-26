@@ -1,8 +1,30 @@
 .tags {
-  padding: 0 5px;
+  //padding: 0 5px;
   display: grid;
-  grid-template-columns: repeat(3, 0.5fr);
+  grid-template-columns: repeat(3, calc(100% / 3));
   gap: 5px;
   width: 100%;
   margin-top: 10px;
+
+  @media screen and (max-width: 1250px) {
+    grid-template-columns: repeat(2, calc(100% / 2));
+  }
+
+  @media screen and (max-width: 1250px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  @media screen and (max-width: 725px) {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  @media screen and (max-width: 400px) {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
 }
