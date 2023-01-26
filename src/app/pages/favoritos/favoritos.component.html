@@ -2,7 +2,7 @@
   <h3 class="favoritos_title_">Os Seus Favoritos</h3>
   <div class="favoritos_grid_container" *ngIf="this.videos">
     <app-video-home-box
-      *ngFor="let item of videos"
+      *ngFor="let item of allFavs"
       [thumb]="this.service.addUrlOfSrc(item.thumbnail__target_id)"
       [data_upload]="item.field_data_upload"
       [video_duration]="item.field_duracao"

@@ -9,6 +9,7 @@ import {UploadService} from "../../service/upload.service";
 })
 export class FavoritosComponent implements OnInit {
   videos: any;
+  allFavs: any;
   favoriteVideos: [] = [];
 
   constructor(private route: ActivatedRoute, public service: UploadService) { }
@@ -21,8 +22,10 @@ export class FavoritosComponent implements OnInit {
         if(this.service.isFavorite(parseInt(value.mid))){
           // @ts-ignore
           this.favoriteVideos.push(value);
-          this.videos = this.favoriteVideos;
+          this.allFavs = this.favoriteVideos;
+          console.log("Is in: ")
         }
+
       })
       //console.table(this.videos);
     })
