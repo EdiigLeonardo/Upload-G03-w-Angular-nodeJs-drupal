@@ -23,7 +23,7 @@
     .videos_grid{
       display: grid;
       margin-top: 20px;
-      grid-template-columns: repeat(3, calc(100% / 3));
+      grid-template-columns: repeat(2, calc(100% / 2));
       align-items: center;
       gap: 10px;
 
@@ -38,7 +38,7 @@
       margin: 1em 0 1em 1em;
       width: 270px;
 
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: 1150px) {
       display: none;
       }
     }
