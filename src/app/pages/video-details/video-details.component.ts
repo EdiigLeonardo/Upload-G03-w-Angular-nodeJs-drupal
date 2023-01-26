@@ -43,12 +43,18 @@ export class VideoDetailsComponent implements OnInit {
 
         this.video.field_tags = this.video.field_tags.replaceAll(', ', ' #')
 
+        /*this.service.Likes(this.video.mid).subscribe(like => {
+          this.like = <any[]>like;
+          this.like = this.like[0]
+        })*/
+
         this.service.getCanal(this.video.field_canal).subscribe(canal => {
           this.canal = <any[]>canal;
           this.canal = this.canal[0]
 
           this.service.getCard(this.video.field_canal).subscribe(videos => {
             this.videos = <any[]>videos;
+
 
             this.service.getComentariosVideo(this.video.mid).subscribe(comment => {
               this.comment = <any[]>comment;
@@ -58,12 +64,6 @@ export class VideoDetailsComponent implements OnInit {
       });
       this.pronto = true;
     });
-
-    // this.service.Likes(this.video.mid).subscribe(like => {
-    //   this.like = <any[]>like;
-    //   this.like = this.like[0]
-    // })
-
   }
 
   addComment(comment: any) {
@@ -73,5 +73,4 @@ export class VideoDetailsComponent implements OnInit {
   public Like() {
     this.service.postLike(this.numero);
   }
-
 }
