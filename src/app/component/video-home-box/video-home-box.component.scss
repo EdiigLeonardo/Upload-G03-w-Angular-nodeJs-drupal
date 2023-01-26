@@ -34,6 +34,7 @@
       object-fit: cover;
       object-position: 50% 30%;
       height: 100%;
+      cursor: pointer;
     }
 
     .home_box_-_profile_pic{
@@ -42,7 +43,7 @@
       height: 58px;
       border-radius: 50%;
       position: absolute;
-      bottom: -50px;
+      bottom: -15%;
       right: 20px;
     }
 
