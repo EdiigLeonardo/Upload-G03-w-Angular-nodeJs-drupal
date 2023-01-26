@@ -13,7 +13,8 @@
         [link_to_video]="item.mid"
         [video_title]="item.name"
         [created]="item.created"
-        [id] = "item.mid"
+        [id]="item.mid"
+        [min_video_profile_photo]="this.service.addUrlOfSrc(item.user_picture)"
       >
       </app-video-home-box>
     </div>
@@ -26,7 +27,8 @@
     </div>
 
     <div>
-      <app-tematicas-sugeridas></app-tematicas-sugeridas> <br>
+      <app-tematicas-sugeridas></app-tematicas-sugeridas>
+      <br>
     </div>
   </div>
 

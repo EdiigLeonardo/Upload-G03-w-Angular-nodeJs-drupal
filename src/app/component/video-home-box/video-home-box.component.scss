@@ -1,15 +1,15 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 1em;
 
-  span,h1, h2,h3{
+  span, h1, h2, h3 {
     background-color: transparent;
   }
 }
 
-.home_box_layout{
+.home_box_layout {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +20,7 @@
   width: 100%;
   overflow: hidden;
 
-  .home_box_header{
+  .home_box_header {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -28,7 +28,7 @@
     height: 100%;
     min-height: 119px;
 
-    .home_box_-_background_photo{
+    .home_box_-_background_photo {
       width: 100%;
       min-height: 128px;
       object-fit: cover;
@@ -37,17 +37,17 @@
       cursor: pointer;
     }
 
-    .home_box_-_profile_pic{
+    .home_box_-_profile_pic {
       object-fit: cover;
-      width: 58px;
-      height: 58px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       position: absolute;
       bottom: -15%;
       right: 20px;
     }
 
-    .home_box_duration{
+    .home_box_duration {
       position: absolute;
       width: 75px;
       height: 18px;
@@ -63,7 +63,8 @@
       color: #d7d7e5;
     }
   }
-  .home_box_bottom{
+
+  .home_box_bottom {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -74,7 +75,7 @@
     height: 100%;
     overflow: hidden;
 
-    .home_box_tags{
+    .home_box_tags {
       font-family: 'Roboto', serif;
       font-style: normal;
       font-weight: 400;
@@ -85,7 +86,7 @@
       background-color: transparent;
     }
 
-    .home_box_title{
+    .home_box_title {
       font-size: 1.3em;
       width: 70%;
       background-color: transparent;
@@ -96,7 +97,7 @@
       height: 100%;
     }
 
-    .home_box_footer{
+    .home_box_footer {
       background-color: transparent;
       display: flex;
       justify-content: space-between;
@@ -106,7 +107,7 @@
       align-items: center;
       color: #92929D;
 
-      .home_box_icons{
+      .home_box_icons {
         background-color: transparent;
         display: flex;
         justify-content: space-between;
@@ -114,7 +115,7 @@
         gap: 10px;
         color: #92929D;
 
-        .icons_video{
+        .icons_video {
           font-size: 1em;
           width: 16px;
           height: 16px;
@@ -122,7 +123,8 @@
         }
       }
     }
-    .created_timestamp{
+
+    .created_timestamp {
       color: #92929D;
     }
   }
