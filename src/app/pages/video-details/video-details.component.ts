@@ -26,6 +26,8 @@ export class VideoDetailsComponent implements OnInit {
   pronto: boolean = false;
   isLiked: boolean = false;
   isDisLiked: boolean = false;
+  numero: any;
+  like: any = {};
 
   constructor(private route: ActivatedRoute, public service: UploadService, private sanitizer: DomSanitizer) {
   }
@@ -40,6 +42,11 @@ export class VideoDetailsComponent implements OnInit {
         this.video.field_media_oembed_video = this.sanitizer.bypassSecurityTrustResourceUrl(this.video.field_media_oembed_video)
 
         this.video.field_tags = this.video.field_tags.replaceAll(', ', ' #')
+
+        this.service.Likes(this.video.mid).subscribe(like => {
+          this.like = <any[]>like;
+          this.like = this.like[0]
+        })
 
         this.service.getCanal(this.video.field_canal).subscribe(canal => {
           this.canal = <any[]>canal;
@@ -60,5 +67,9 @@ export class VideoDetailsComponent implements OnInit {
 
   addComment(comment: any) {
     this.comment.unshift(comment)
+  }
+
+  public Like() {
+    this.service.postLike(this.numero);
   }
 }

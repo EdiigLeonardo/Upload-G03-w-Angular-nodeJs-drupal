@@ -18,10 +18,10 @@ export class UploadService {
   readStore() {
     // @ts-ignore
     let store: string[] = localStorage.getItem("UploadStore");
-    if(store !== null){
+    if (store !== null) {
       //@ts-ignore
       const STORE_2 = store.split(",");
-      STORE_2.forEach((value: any, index: number)=>{
+      STORE_2.forEach((value: any, index: number) => {
         value = parseInt(value);
         STORE_2[index] = value;
       })
@@ -84,7 +84,7 @@ export class UploadService {
     return this.http.get(BASE_URL + "/video");
   }
 
-  getAllVideos(){
+  getAllVideos() {
     return this.http.get(BASE_URL + "/video2");
   }
 
@@ -117,6 +117,22 @@ export class UploadService {
     return PANTHEON_URL + url;
   }
 
+  Likes(id: number) {
+    return this.http.get(BASE_URL + "/likes/" + id);
+  }
+
+  postLike(numero_de_likes: number) {
+    let p = {
+      entity_id: ["8"],
+      entity_type: ["media"],
+      flag_id: [{"target_id": "like", "target_type": "flag"}],
+      uid: ["0"],
+      Contador_de_likes: [{value: numero_de_likes}],
+    }
+    this.http.post(PANTHEON_URL + "entity/flagging", p).subscribe(() => {
+    });
+  }
+
   postComment(comment_name: string, comment_email: string, comment_body: string, id: number) {
     let data = {
       entity_id: [{target_id: id}],
@@ -146,7 +162,6 @@ export class UploadService {
     this.http.post(PANTHEON_URL + "comment", data).subscribe(() => {
     });
   }
-
 
 
   toogleFavorite(id: number) {

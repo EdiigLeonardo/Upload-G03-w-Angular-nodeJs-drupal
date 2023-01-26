@@ -2,6 +2,7 @@
   <app-box_page *ngFor="let p of tematicas"
                 [img_de_capa]="this.service.addUrlOfSrc(p.field_imagem)"
                 [nome]="p.title"
+                [link]="p.nid"
                 [router_da_pagina]="'/tematica'"
                 [botao]="'Ver Tematica'"></app-box_page>
 </div>
