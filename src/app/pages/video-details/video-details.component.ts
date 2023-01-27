@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, EventEmitter, Output, OnChanges, SimpleChanges, ChangeDetectorRef} from '@angular/core';
 import {faThumbsUp as faThumbsUpSolid} from "@fortawesome/free-solid-svg-icons";
 import {faThumbsDown as faThumbsDownSolid} from "@fortawesome/free-solid-svg-icons";
 import {faThumbsUp} from "@fortawesome/free-regular-svg-icons";
@@ -26,11 +26,18 @@ export class VideoDetailsComponent implements OnInit {
   pronto: boolean = false;
   isLiked: boolean = false;
   isDisLiked: boolean = false;
+  isFlagged: boolean = false;
   numero: any;
-  like: any = {};
+  likes: any = {};
+  @Output() post = new EventEmitter<any>();
+  dislikes: any = {};
 
-  constructor(private route: ActivatedRoute, public service: UploadService, private sanitizer: DomSanitizer) {
+
+  constructor(private route: ActivatedRoute, public service: UploadService,
+              private sanitizer: DomSanitizer, private cdr: ChangeDetectorRef) {
   }
+
+  id = this.route.snapshot.params['id']
 
   ngOnInit(): void {
     this.route.params.subscribe(q => {
@@ -43,9 +50,19 @@ export class VideoDetailsComponent implements OnInit {
 
         this.video.field_tags = this.video.field_tags.replaceAll(', ', ' #')
 
-        /*this.service.Likes(this.video.mid).subscribe(like => {
-          this.like = <any[]>like;
-          this.like = this.like[0]
+        this.service.getLikes(this.video.mid).subscribe(like => {
+          this.likes = <any[]>like;
+          if(Object.keys(this.likes).length !== 0){
+            this.likes = this.likes[0];
+          }
+        })
+
+        /*this.service.getDislikes(this.video.mid).subscribe(dislike => {
+          this.likes = <any[]>dislike;
+          if(Object.keys(this.dislikes).length !== 0){
+            this.dislikes = this.dislikes[0];
+            console.log("dislikes: ",this.dislikes);
+          }
         })*/
 
         this.service.getCanal(this.video.field_canal).subscribe(canal => {
@@ -70,7 +87,27 @@ export class VideoDetailsComponent implements OnInit {
     this.comment.unshift(comment)
   }
 
-  public Like() {
-    this.service.postLike(this.numero);
+  public toggleLike() {
+    this.isLiked = !this.isLiked;
+    if(this.isLiked){
+      this.service.postLike(this.id);
+      this.post.emit({entity_id: this.id});
+    }
+  }
+
+  public toggleDislike(){
+    this.isDisLiked = !this.isDisLiked;
+    if(this.isDisLiked){
+      this.service.postDisLike(this.id);
+      this.post.emit({entity_id: this.id});
+      this.cdr.detectChanges();
+    }
+  }
+
+  public toogleReport(){
+    this.isFlagged = !this.isFlagged;
+    if(this.isFlagged){
+      this.service.postReportVideo(this.id);
+    }
   }
 }

@@ -12,7 +12,6 @@ a{
   left: 0;
   width: 300px;
   height: 100%;
-  max-width: var(--wrapper_width_menu);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -58,6 +57,7 @@ a{
       height: 39px;
       object-fit: contain;
       flex: 1;
+      cursor: pointer;
     }
 
 
@@ -153,3 +153,19 @@ a{
     width: 100%;
   }
 }
+
+/*.buttons_language{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  >button{
+    border: none;
+    background-color: transparent;
+    color: #92929D;
+    cursor: pointer;
+  }
+}*/

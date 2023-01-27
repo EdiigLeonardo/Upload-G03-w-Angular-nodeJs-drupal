@@ -1,0 +1,16 @@
+<div class="box_form">
+  <div class="container__comments">
+    <div class="comments_form_with_pic">
+      <div class="comments_-_container_-_form">
+        <div class="top-form">
+          <input placeholder="Nome" type="text" class="comment_input" [(ngModel)]="comment_name">
+          <input placeholder="Email" type="email" class="comment_input" [(ngModel)]="comment_email">
+        </div>
+        <textarea placeholder="mensagem" class="comment_input message" [(ngModel)]="comment_body"></textarea>
+        <div class="btn_-_div">
+          <button class="comment_btn" type="button" (click)="submitValuesVideo()">Submeter</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

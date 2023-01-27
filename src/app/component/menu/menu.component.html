@@ -1,7 +1,7 @@
 <div class="menu_layout">
   <div class="menu_header">
     <fa-icon [icon]="faBars" class="icon_nav" (click)=clickView()></fa-icon>
-    <img class="img_-_logo_-_nav" alt="logotipo" src="assets/upload.svg">
+    <img class="img_-_logo_-_nav" alt="logotipo" src="assets/upload.svg" routerLink="/home" routerLinkActive="active">
   </div>
   <div class="menu_layout_-_toogle" [ngClass]="toogleView ? '' : 'hidden'">
     <div class="menu_icons__">
@@ -30,7 +30,11 @@
       <app-tags></app-tags>
     </div>
   </div>
-
+<!--  <div class="buttons_language">
+    <button (click)="changeLocale.emit('en')">English</button>
+    <button (click)="changeLocale.emit('fr')">French</button>
+    <button (click)="changeLocale.emit('pt')">Portuguese</button>
+  </div>-->
 </div>
 
 

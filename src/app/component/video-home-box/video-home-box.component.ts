@@ -34,6 +34,9 @@ export class VideoHomeBoxComponent implements OnInit {
   @Input() link_to_video = "";
   @Input() created = "";
   @Input() id = "";
+  likes : any;
+  comment: any;
+  num_of_comments = 0;
 
   toggleFavorite(){
     let mid = parseInt(this.id);
@@ -49,6 +52,20 @@ export class VideoHomeBoxComponent implements OnInit {
   constructor(private route: ActivatedRoute, public service: UploadService) { }
 
   ngOnInit(): void {
+    let mid = parseInt(this.id);
+
+    this.service.getLikes(mid).subscribe(like => {
+      this.likes = <any[]>like;
+      if(Object.keys(this.likes).length !== 0){
+        this.likes = this.likes[0];
+      }
+    })
+
+    this.service.getComentariosVideo(mid).subscribe(comment => {
+      this.comment = <any[]>comment;
+
+      this.num_of_comments = Object.keys(this.comment).length
+    })
   }
 
 }

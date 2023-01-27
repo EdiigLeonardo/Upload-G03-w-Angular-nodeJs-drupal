@@ -76,6 +76,9 @@
     .canal_box_-_canal_-_nome {
       margin: 20px 0;
       font-size: 1.5em;
+      text-overflow: ellipsis;
+      max-height: 29px;
+      overflow: auto;
     }
 
     > p {

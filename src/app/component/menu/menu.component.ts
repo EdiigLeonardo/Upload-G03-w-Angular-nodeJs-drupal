@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {faBarsStaggered} from "@fortawesome/free-solid-svg-icons"
 import {faHouse} from "@fortawesome/free-solid-svg-icons"
 import {faHeart} from "@fortawesome/free-solid-svg-icons"
@@ -19,10 +19,12 @@ export class MenuComponent implements OnInit {
   faBars = faBars;
   faHeart = faHeart;
   toogleView = false;
+  //@Output() changeLocale = new EventEmitter<string>();
 
   clickView(){
     this.toogleView = !this.toogleView
   }
+
 
   constructor() { }
 

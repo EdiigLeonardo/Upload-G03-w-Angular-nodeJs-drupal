@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {LOCALE_ID,NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -26,7 +26,7 @@ import {TagVideosComponent} from './pages/tag-videos/tag-videos.component';
 import {TematicaComponent} from './pages/tematica/tematica.component';
 import {FavoritosComponent} from './pages/favoritos/favoritos.component';
 import {PostCommentCanalComponent} from './component/post-comment-canal/post-comment-canal.component';
-
+import { ReportFormComponent } from './utils/report-form/report-form.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +51,8 @@ import {PostCommentCanalComponent} from './component/post-comment-canal/post-com
     TagVideosComponent,
     TematicaComponent,
     FavoritosComponent,
-    PostCommentCanalComponent
+    PostCommentCanalComponent,
+    ReportFormComponent
   ],
   imports: [
     BrowserModule,

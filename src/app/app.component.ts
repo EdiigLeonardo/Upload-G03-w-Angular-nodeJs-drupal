@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {faStar} from "@fortawesome/free-solid-svg-icons"
 
 @Component({
@@ -8,6 +8,5 @@ import {faStar} from "@fortawesome/free-solid-svg-icons"
 
 })
 export class AppComponent {
-  faStar = faStar
-  title = 'upload-project';
+  constructor() {}
 }

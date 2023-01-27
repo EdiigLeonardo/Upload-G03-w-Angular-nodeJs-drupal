@@ -117,19 +117,35 @@ export class UploadService {
     return PANTHEON_URL + url;
   }
 
-  Likes(id: number) {
+  getLikes(id: number) {
     return this.http.get(BASE_URL + "/likes/" + id);
   }
 
-  postLike(numero_de_likes: number) {
-    let p = {
-      entity_id: ["8"],
+  getDislikes(id: number) {
+    return this.http.get(BASE_URL + "/dislikes/" + id);
+  }
+
+  postLike(video_id: number) {
+    let data = {
+      entity_id: [video_id],
       entity_type: ["media"],
       flag_id: [{"target_id": "like", "target_type": "flag"}],
       uid: ["0"],
-      Contador_de_likes: [{value: numero_de_likes}],
     }
-    this.http.post(PANTHEON_URL + "entity/flagging", p).subscribe(() => {
+    this.http.post(PANTHEON_URL + "entity/flagging", data).subscribe((response) => {
+      // @ts-ignore
+      console.table("PostLiked Response", response);
+    });
+  }
+
+  postDisLike(video_id: number) {
+    let data = {
+      entity_id: [video_id],
+      entity_type: ["media"],
+      flag_id: [{"target_id": "dislike", "target_type": "flag"}],
+      uid: ["0"],
+    }
+    this.http.post(PANTHEON_URL + "entity/flagging", data).subscribe((response) => {
     });
   }
 
@@ -163,6 +179,18 @@ export class UploadService {
     });
   }
 
+  postReportVideo(id: number){
+    let data = {
+      entity_id:[id],
+      entity_type:["media"],
+      flag_id:[{"target_id": "report","target_type": "flag"}],
+      uid: ["0"]
+    }
+
+    this.http.post(PANTHEON_URL + "entity/flagging", data).subscribe((response) => {
+    });
+  }
+
 
   toogleFavorite(id: number) {
     if (!this.isFavorite(id)) {
@@ -183,6 +211,5 @@ export class UploadService {
   isFavorite(id: number): boolean {
     return this.favorites.includes(id);
   }
-
 
 }

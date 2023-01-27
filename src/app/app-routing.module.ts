@@ -12,6 +12,7 @@ import {TagVideosComponent} from "./pages/tag-videos/tag-videos.component";
 import {TematicaComponent} from "./pages/tematica/tematica.component";
 import {TematicasSugeridasComponent} from "./component/tematicas-sugeridas/tematicas-sugeridas.component";
 import {FavoritosComponent} from "./pages/favoritos/favoritos.component";
+import {ReportFormComponent} from "./utils/report-form/report-form.component";
 
 const routes: Routes = [
   {path: 'video/:id', component: VideoDetailsComponent},
@@ -24,7 +25,7 @@ const routes: Routes = [
   {path: 'playlists', component: PlaylistsComponent},
   {path: 'playlist/:id_playlist', component: PlaylistComponent},
   {path: 'favoritos', component: FavoritosComponent},
-  //{path: 'favoritos', component: FavoritosComponent},
+  {path: 'form', component: ReportFormComponent},
   {path: 'canais_sugeridos', component: CanaisSugeridosComponent},
   {path: 'tag/:id_tag', component: TagVideosComponent},
   {path: 'tematicas_sugeridas', component: TematicasSugeridasComponent},
