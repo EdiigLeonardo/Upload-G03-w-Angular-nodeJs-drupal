@@ -34,6 +34,7 @@ export class VideoHomeBoxComponent implements OnInit {
   @Input() link_to_video = "";
   @Input() created = "";
   @Input() id = "";
+  @Input() canal_id = "";
   likes : any;
   comment: any;
   num_of_comments = 0;

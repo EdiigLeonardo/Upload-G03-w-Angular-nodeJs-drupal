@@ -32,6 +32,7 @@ export class CommentComponent implements OnInit {
     let mid = parseInt(this.id);
     if (this.isFlagged) {
       this.service.postReportVideo(mid);
+      window.alert("Report foi feito ");
     }
   }
 }

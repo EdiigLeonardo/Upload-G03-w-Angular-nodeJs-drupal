@@ -111,8 +111,10 @@ export class VideoDetailsComponent implements OnInit {
     let mid = parseInt(this.id);
     if (this.isFlagged) {
       this.service.postReportVideo(mid);
+      window.alert("Report Feito");
     }
   }
+
   addLikes(contador_likes: any) {
     this.likes.Contador_de_likes += 1
     console.log(this.likes.Contador_de_likes += 1);
