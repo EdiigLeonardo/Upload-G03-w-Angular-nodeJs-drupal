@@ -54,6 +54,7 @@ export class VideoDetailsComponent implements OnInit {
           this.likes = <any[]>like;
           if (Object.keys(this.likes).length !== 0) {
             this.likes = this.likes[0];
+
           }
         })
 
@@ -61,7 +62,6 @@ export class VideoDetailsComponent implements OnInit {
           this.dislikes = <any[]>dislike;
           if (Object.keys(this.dislikes).length !== 0) {
             this.dislikes = this.dislikes[0];
-            // console.log("dislikes: ",this.dislikes);
           }
         })
 
