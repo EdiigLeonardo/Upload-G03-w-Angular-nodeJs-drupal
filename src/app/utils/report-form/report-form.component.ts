@@ -24,7 +24,6 @@ export class ReportFormComponent implements OnInit {
     /*this.service.postComment(this.comment_name, this.comment_email, this.comment_body, this.id);
     this.post.emit({field_nome: this.comment_name, field_comentario: this.comment_body});
     this.comment_name = "", this.comment_email = "", this.comment_body = "";*/
-
   }
 
   constructor(public service: UploadService, public route: ActivatedRoute) {

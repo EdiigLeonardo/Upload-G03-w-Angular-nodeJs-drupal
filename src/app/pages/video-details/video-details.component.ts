@@ -113,4 +113,8 @@ export class VideoDetailsComponent implements OnInit {
       this.service.postReportVideo(mid);
     }
   }
+  addLikes(contador_likes: any) {
+    this.likes.Contador_de_likes += 1
+    console.log(this.likes.Contador_de_likes += 1);
+  }
 }
