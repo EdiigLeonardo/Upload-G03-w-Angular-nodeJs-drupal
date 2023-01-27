@@ -52,18 +52,18 @@ export class VideoDetailsComponent implements OnInit {
 
         this.service.getLikes(this.video.mid).subscribe(like => {
           this.likes = <any[]>like;
-          if(Object.keys(this.likes).length !== 0){
+          if (Object.keys(this.likes).length !== 0) {
             this.likes = this.likes[0];
           }
         })
 
-        /*this.service.getDislikes(this.video.mid).subscribe(dislike => {
-          this.likes = <any[]>dislike;
-          if(Object.keys(this.dislikes).length !== 0){
+        this.service.getDislikes(this.video.mid).subscribe(dislike => {
+          this.dislikes = <any[]>dislike;
+          if (Object.keys(this.dislikes).length !== 0) {
             this.dislikes = this.dislikes[0];
-            console.log("dislikes: ",this.dislikes);
+            // console.log("dislikes: ",this.dislikes);
           }
-        })*/
+        })
 
         this.service.getCanal(this.video.field_canal).subscribe(canal => {
           this.canal = <any[]>canal;
@@ -89,24 +89,24 @@ export class VideoDetailsComponent implements OnInit {
 
   public toggleLike() {
     this.isLiked = !this.isLiked;
-    if(this.isLiked){
+    if (this.isLiked) {
       this.service.postLike(this.id);
       this.post.emit({entity_id: this.id});
     }
   }
 
-  public toggleDislike(){
+  public toggleDislike() {
     this.isDisLiked = !this.isDisLiked;
-    if(this.isDisLiked){
+    if (this.isDisLiked) {
       this.service.postDisLike(this.id);
       this.post.emit({entity_id: this.id});
       this.cdr.detectChanges();
     }
   }
 
-  public toogleReport(){
+  public toogleReport() {
     this.isFlagged = !this.isFlagged;
-    if(this.isFlagged){
+    if (this.isFlagged) {
       this.service.postReportVideo(this.id);
     }
   }
