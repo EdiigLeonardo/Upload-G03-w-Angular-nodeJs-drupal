@@ -32,7 +32,8 @@
     <app-comment *ngFor="let c of comment"
                  [name]="c.field_nome"
                  [comment]="c.field_comentario"
-                 [data_upload]="c.created">
+                 [data_upload]="c.created"
+                 [id]="c.cid">
     </app-comment>
   </div>
 </div>

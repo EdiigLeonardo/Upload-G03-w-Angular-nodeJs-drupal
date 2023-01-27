@@ -3,7 +3,8 @@ import {faThumbsUp as faThumbsUpSolid} from "@fortawesome/free-solid-svg-icons";
 import {faThumbsDown as faThumbsDownSolid} from "@fortawesome/free-solid-svg-icons";
 import {faThumbsUp} from "@fortawesome/free-regular-svg-icons";
 import {faThumbsDown} from "@fortawesome/free-regular-svg-icons";
-import {faFlag} from "@fortawesome/free-solid-svg-icons";
+import {faFlag as faFlagSolid} from "@fortawesome/free-solid-svg-icons";
+import {faFlag} from "@fortawesome/free-regular-svg-icons";
 import {UploadService} from "../../service/upload.service";
 import {ActivatedRoute} from "@angular/router";
 import {DomSanitizer} from "@angular/platform-browser";
@@ -27,6 +28,7 @@ export class VideoDetailsComponent implements OnInit {
   isLiked: boolean = false;
   isDisLiked: boolean = false;
   isFlagged: boolean = false;
+  faFlagSolid = faFlagSolid;
   numero: any;
   likes: any = {};
   @Output() post = new EventEmitter<any>();
@@ -106,8 +108,9 @@ export class VideoDetailsComponent implements OnInit {
 
   public toogleReport() {
     this.isFlagged = !this.isFlagged;
+    let mid = parseInt(this.id);
     if (this.isFlagged) {
-      this.service.postReportVideo(this.id);
+      this.service.postReportVideo(mid);
     }
   }
 }

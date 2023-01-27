@@ -149,6 +149,17 @@ export class UploadService {
     });
   }
 
+  postReportComment(comment_id: number) {
+    let data = {
+      entity_id: [comment_id],
+      entity_type: ["comment"],
+      flag_id: [{"target_id": "dislike", "target_type": "flag"}],
+      uid: ["0"],
+    }
+    this.http.post(PANTHEON_URL + "entity/flagging", data).subscribe((response) => {
+    });
+  }
+
   postComment(comment_name: string, comment_email: string, comment_body: string, id: number) {
     let data = {
       entity_id: [{target_id: id}],
@@ -186,7 +197,7 @@ export class UploadService {
       flag_id:[{"target_id": "report","target_type": "flag"}],
       uid: ["0"]
     }
-
+    console.log('Im Reposting: ')
     this.http.post(PANTHEON_URL + "entity/flagging", data).subscribe((response) => {
     });
   }

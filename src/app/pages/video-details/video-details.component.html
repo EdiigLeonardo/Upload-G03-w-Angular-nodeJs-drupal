@@ -2,9 +2,9 @@
   <div class="corpo">
     <div class="titulo">
       <h2>{{video.name}}</h2>
-      <h5>#{{video.field_tags}}</h5>
+      <h5 *ngIf="video.field_tags">#{{video.field_tags}}</h5>
     </div>
-    <fa-icon [icon]="faFlag" class="report"></fa-icon>
+    <fa-icon [icon]="isFlagged? faFlagSolid : faFlag" (click)="toogleReport()" class="report"></fa-icon>
     <iframe class="video"
             [src]="video.field_media_oembed_video">
     </iframe>
@@ -36,7 +36,8 @@
     <app-comment *ngFor="let c of comment"
                  [name]="c.field_nome"
                  [comment]="c.field_comentario"
-                 [data_upload]="c.created">
+                 [data_upload]="c.created"
+                 [id]="c.cid">
     </app-comment>
   </div>
   <div class="outros">
