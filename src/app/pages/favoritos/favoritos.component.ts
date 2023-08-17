@@ -8,7 +8,7 @@ import {UploadService} from "../../service/upload.service";
   styleUrls: ['./favoritos.component.scss']
 })
 export class FavoritosComponent implements OnInit {
-  videos: any;
+  videosFavoritos: any;
   allFavs: any;
   favoriteVideos: [] = [];
 
@@ -16,8 +16,8 @@ export class FavoritosComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getAllVideos().subscribe((videos) => {
-      this.videos = videos;
-      this.videos.forEach((value: object, i: number)=>{
+      this.videosFavoritos = videos;
+      this.videosFavoritos.forEach((value: object, i: number)=>{
         // @ts-ignore
         if(this.service.isFavorite(parseInt(value.mid))){
           // @ts-ignore
@@ -27,7 +27,6 @@ export class FavoritosComponent implements OnInit {
         }
 
       })
-      //console.table(this.videos);
     })
   }
 
